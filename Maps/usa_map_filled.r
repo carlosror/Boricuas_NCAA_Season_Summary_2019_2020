@@ -57,6 +57,9 @@ theme_map <- function(...) {
   )
 }
 
+# How to do the selective filling using ifelse and factor()
+# https://dave-clark.github.io/post/making-maps-with-ggplot2-and-sf/
+
 p <- ggplot(usa_data_join, aes(fill = factor(ifelse(!is.na(usa_data_join$PlayerCount), 1, 2)))) + geom_sf(color = "white") + 
             scale_fill_manual(values = c("dodgerblue4", "light gray")) + 
             coord_sf(xlim = c(-125.3, -66.2)) +

@@ -80,6 +80,6 @@ p <- ggplot(pr_data_join) + geom_sf(color = "white", fill = "light gray") +
             coord_sf(xlim = c(-67.2, -65.6625)) +
             geom_text(aes(X, Y, label = NAME), data = centroids, size = 4.0, color = 'dodgerblue4') +
             theme_map() +
-            ggtitle(label = "Number of players from Puerto Rico by hometown", subtitle = "Academic year 2019-2020")
+            ggtitle(label = "Number of players from Puerto Rico by municipality", subtitle = "Academic year 2019-2020")
 print(p)
-ggsave(filename = "pr_map3.png", plot = p, width = 16.05, height = 7.5)
+# ggsave(filename = "pr_map3.png", plot = p, width = 16.05, height = 7.5)

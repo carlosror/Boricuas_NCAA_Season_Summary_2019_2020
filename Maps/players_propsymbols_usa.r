@@ -81,4 +81,4 @@ q <- ggplot(usa_data_join) + geom_sf(color = "white", fill = "light gray") +
 # https://www.r-spatial.org/r/2018/10/25/ggplot2-sf-3.html
 # Using cowplot
 print(plot_grid(p, q, nrow = 1, rel_widths = c(2.35, 1)))
-ggsave(filename = "usa_map9.png", , width = 16.05, height = 7.5)
+# ggsave(filename = "usa_map9.png", , width = 16.05, height = 7.5)
