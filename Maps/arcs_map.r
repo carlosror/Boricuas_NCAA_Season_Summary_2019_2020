@@ -81,6 +81,7 @@ colors <- c("NAIA" = "#d52130", "NCAA DI" = "#005eb8", "NCAA DII" = "#005eb8", "
 
 p <- ggplot(usa_shp_mainland_and_pr) + geom_sf(color = "white", fill = "light gray") + theme_map() + 
      geom_path(data = all_players_3_curves, aes(x=lon, y=lat, group=Player_Institution, color = Division)) + 
+     guides(color = guide_legend(override.aes = list(size = 2))) + 
      scale_color_manual(values = colors)
      # geom_path(data = as.data.frame(inter), aes(x=lon, y=lat, group=NULL)) +
      # geom_path(data = as.data.frame(inter2), aes(x=lon, y=lat, group=NULL)) + 
