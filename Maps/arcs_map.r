@@ -49,6 +49,10 @@ theme_map <- function(...) {
     axis.ticks = element_blank(),
     axis.title.x = element_blank(),
     axis.title.y = element_blank(),
+    legend.position="top",
+    legend.title = element_blank(),
+    legend.spacing.x = unit(0.2, 'cm'),
+    legend.text = element_text(size = 12),
     # panel.grid.minor = element_line(color = "#ebebe5", size = 0.2),
     panel.grid.major = element_line(color = "#ffffff", size = 0.2),
     plot.title = element_text(hjust = 1.6, colour = "dodgerblue4", size = 32),
@@ -70,20 +74,20 @@ for (idx in 1:nrow(all_players_2)) {
   # df_cg_2_z <- cbind(df_cg_2, gcIntermediate(c(df_cg$p1_lon[idx], df_cg$p1_lat[idx]), c(df_cg$p2_lon[idx], df_cg$p2_lat[idx]), n=20, addStartEnd=TRUE))
 }
 
-
 # https://stackoverflow.com/questions/29743691/duplicate-rows-in-a-data-frame-in-r
 # 2nd answer
 idx <- rep(1:nrow(all_players_2), rep(num_points + 2, nrow(all_players_2)))
 all_players_3 <- all_players_2[idx,]
 all_players_3_curves <- cbind(all_players_3, curves)
 
-colors <- c("NAIA" = "#d52130", "NCAA DI" = "#005eb8", "NCAA DII" = "#005eb8", "NCAA DIII" = "#005eb8", "NJCAA DI" = "#1a4065", "NJCAA DII" = "#1a4065")
-
+# https://stackoverflow.com/questions/15059093/ggplot2-adjust-the-symbol-size-in-legends
 p <- ggplot(usa_shp_mainland_and_pr) + geom_sf(color = "white", fill = "light gray") + theme_map() + 
      geom_path(data = all_players_3_curves, aes(x=lon, y=lat, group=Player_Institution, color = Division)) + 
-     guides(color = guide_legend(override.aes = list(size = 2))) + 
-     scale_color_manual(values = colors)
+     guides(color = guide_legend(nrow = 1, override.aes = list(size = 2))) + 
+     scale_color_brewer(palette="Set1")
      # geom_path(data = as.data.frame(inter), aes(x=lon, y=lat, group=NULL)) +
      # geom_path(data = as.data.frame(inter2), aes(x=lon, y=lat, group=NULL)) + 
      # geom_path(data = as.data.frame(inter3), aes(x=lon, y=lat, group=NULL))
 print(p)
+
+brewer.pal(6, "Set1")
