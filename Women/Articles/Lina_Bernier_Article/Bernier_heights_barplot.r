@@ -48,7 +48,8 @@ p <- ggplot(dig_rankings_500) + geom_bar(aes(x=Height), fill="steelblue4", width
      annotation_raster(raster = bernier_photo, xmin = 9, xmax = 11, ymin =6, ymax = 19) +
      theme_plot() + 
      ggtitle(label = "The tallest of them all", subtitle = "Number of players with 500+ digs in NCAA Division I, by height\nAcademic Year 2019-2020") + 
-     geom_label(x = 9.8, y = 5, label = "Lina Bernier", size = 7, family = "Playball", color = "Black", label.size = NA) +
+     geom_label(x = 9.8, y = 5, label = "Lina Bernier", size = 7, family = "Playball", color = "Black", label.size = NA) + 
+     geom_label(x = 9.2, y = 18, label = "530 digs\n5.15 digs/set", size = 5, color = "Black", label.size = NA, hjust = "right") +
      geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), colour = "Black", data = line_df, arrow = arrow(length = unit(0.02, "npc"), type = "closed"))
      # theme_plot()
      # scale_y_continuous(labels=percent) + 
