@@ -47,7 +47,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   draw_line(340, 36, 340, 756) # vertical line
   
   # Number of players
-  text_frame(0, 50, 340, 87, ["274", "student athletes"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
+  text_frame(0, 51, 340, 87, ["274", "student athletes"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
   draw_line(0, 140, 340, 140)
   
   # Puerto Rico map
@@ -68,5 +68,37 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   
   # United States map
   insert_image(37, 551, 270, 142, "./../Maps/usa_map_filled.png")
-  text_frame(0, 688, 340, 75, ["32", "states & Washington, D.C."], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
+  text_frame(0, 688, 340, 75, ["33", "states & Washington, D.C."], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
+  
+  # All Academic
+  insert_image(440, 44, 73, 130, "./By_the_numbers/All_Academic.png")
+  text_frame(340, 183, 272, 75, ["93", "All-Academic"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
+  draw_line(340, 251, 612, 251)
+  
+  # All Conference
+  insert_image(416, 257, 120, 82, "./By_the_numbers/All_Conference_2.png")
+  text_frame(340, 348, 272, 75, ["56", "All-Conference"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
+  draw_line(340, 414, 612, 414)
+  
+  # Top 10
+  insert_image(426, 420, 100, 73, "./top_10_4.png")
+  text_frame(340, 501, 272, 75, ["73", "conference leaders"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
+  draw_line(340, 568, 612, 568)
+  
+  # Tournament logos
+  logo_height = 55
+  NAIA_width = logo_height * (624.0 / 604.0)
+  NCAA_DI_width = logo_height * (849.0 / 750.0)
+  NCAA_DII_width = (logo_height / 2.0) * (2.69) # NCAA DIII will be the same
+  x_pos_1 = ((612 - 340) - (NAIA_width + NCAA_DI_width + NCAA_DII_width + 2 * 4.0)) / 2.0 + 340
+  y_pos_1 = 575
+  insert_image(x_pos_1, y_pos_1, NAIA_width, logo_height, "./Tournament_Logos/NAIA_2019_Women's_Volleyball_Championship.png")
+  insert_image(x_pos_1 + NAIA_width + 4.0, y_pos_1, NCAA_DI_width, logo_height, "./Tournament_Logos/NCAA_Division_I_2019_Women's_Volleyball_Championship.png")
+  insert_image(x_pos_1 + NAIA_width + NCAA_DI_width + 4.0, y_pos_1, NCAA_DII_width, logo_height / 2.0, "./Tournament_Logos/NCAA_Division_II_2019_Women's_Volleyball_Championship.png")
+  insert_image(x_pos_1 + NAIA_width + NCAA_DI_width + 4.0, y_pos_1 + logo_height / 2.0, NCAA_DII_width, logo_height / 2.0, "./Tournament_Logos/NCAA_Division_III_2019_Women's_Volleyball_Championship.png")
+  NJCAA_width = logo_height * (833.0 / 625.0)
+  x_pos_2 = ((612 - 340) - (2 * NJCAA_width)) / 2.0 + 340
+  insert_image(x_pos_2, y_pos_1 + logo_height + 2, NJCAA_width, logo_height, "./Tournament_Logos/NJCAA_Division_I_2019_Volleyball_Championship.png")
+  insert_image(x_pos_2 + NJCAA_width, y_pos_1 + logo_height + 2, NJCAA_width, logo_height, "./Tournament_Logos/NJCAA_Division_II_2019_Volleyball_Championship.png")
+  text_frame(340, y_pos_1 + 2 * (logo_height + 2), 272, 75, ["56", "national tournament participants"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
   
