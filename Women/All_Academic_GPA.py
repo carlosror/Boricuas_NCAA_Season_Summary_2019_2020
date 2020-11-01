@@ -56,9 +56,10 @@ with open("All_Academic_2019_2020.csv") as f:
     # Beach VB players:
     if player_name in ["Keniah Rivera", "Joise Maldonado", "Génesis Benítez"]: school_division = current_line_list[4].replace(" BVB", "")
     player_major = current_line_list[5]
+    player_GPA = current_line_list[6]
     player_award = current_line_list[7]
     
-    single_player_list = [player_name, image_filename, player_school, school_state, player_conf, school_division, player_major, player_award]
+    single_player_list = [player_name, image_filename, player_school, school_state, player_conf, school_division, player_major, player_award, player_GPA]
     players_list.append(single_player_list)
     players_names_list.append(player_name)
 
@@ -164,24 +165,29 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
         setLineSpacing(11, player_name)
         setTextAlignment(ALIGN_CENTERED, player_name)
         
-        player_major_background_height = 24
-        player_major_background = createRect(banner_x + 0.5, photo_y + 176, 131, player_major_background_height)
+        player_major_background_height = 34
+        player_major_background = createRect(banner_x + 0.5, photo_y + 176 - 10, 131, player_major_background_height)
         setFillColor("White", player_major_background); setLineColor("White", player_major_background)
         
-        player_academics_h = 25
+        player_academics_h = 35
         offset = 2.5
         if current_player[6] == "": offset = 5
-        player_academics = createText(banner_x, photo_y + 176 + offset, 132, player_academics_h)
+        player_academics = createText(banner_x, photo_y + 176 - 10 + offset, 132, player_academics_h)
         insertText(current_player[6] + "\n", -1, player_academics)
         setFont("Playball Regular", player_academics); setFontSize(11, player_academics)
         major_length = getTextLength(player_academics)
         player_award = current_player[7]
         award_length = len(player_award)
-        insertText(player_award, -1, player_academics)
+        insertText(player_award + "\n", -1, player_academics)
         # page_debug = createText(banner_x, photo_y + 176 + 3 + player_major_background_height, 132, 24)
         # setText("\n" + str(major_length) + " " + str(award_length), page_debug)
         selectText(major_length, award_length, player_academics); setFontSize(7.5, player_academics)
         selectText(major_length, award_length, player_academics); setFont("OLD SPORT 02 ATHLETIC NCV Regular", player_academics)
+        player_GPA = current_player[8]
+        GPA_length = len("Minimum GPA: " + player_GPA + "\n")
+        insertText("Minimum GPA: " + player_GPA, -1, player_academics)
+        selectText(major_length + award_length, GPA_length, player_academics); setFontSize(9.0, player_academics)
+        selectText(major_length + award_length, GPA_length, player_academics); setFont("Asimov Print C", player_academics)
         setTextColor("NJCAA Blue", player_academics)
         setLineSpacing(10, player_academics); setTextAlignment(ALIGN_CENTERED, player_academics)
         
@@ -209,18 +215,18 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
         
         
         player_conf_background_height = 24.0
-        player_conf_background = createRect(banner_x + 0.5, photo_y + 176 + player_major_background_height, 131, player_conf_background_height)
+        player_conf_background = createRect(banner_x + 0.5, photo_y + 176 - 10 + player_major_background_height, 131, player_conf_background_height)
         setFillColor("Darker Gray", player_conf_background); setLineColor("Darker Gray", player_conf_background)
         
         player_conf_logo_w = 33.0
         player_conf_img = current_player[4].replace(" ", "_")
         player_conf_logo_h = min(player_conf_logo_w * conf_logos_dict[player_conf_img], 24.0)
-        conf_logo = createImage(banner_x, photo_y + 176 + player_major_background_height + (player_conf_background_height - player_conf_logo_h) / 2.0, player_conf_logo_w, player_conf_logo_h)
+        conf_logo = createImage(banner_x, photo_y + 176 - 10 + player_major_background_height + (player_conf_background_height - player_conf_logo_h) / 2.0, player_conf_logo_w, player_conf_logo_h)
         loadImage("./Conference_Logos/" + player_conf_img + ".png", conf_logo); setScaleImageToFrame(1, 1, conf_logo)
         
         offset = 10.0
         if len(current_player[4]) > 26: offset = 2.5
-        player_conf_frame = createText(banner_x + player_conf_logo_w + 1, photo_y + 176 + player_major_background_height + offset, 98, 19)
+        player_conf_frame = createText(banner_x + player_conf_logo_w + 1, photo_y + 176 - 10 + player_major_background_height + offset, 98, 19)
         # player_conf_array = current_player[4].split(" ")
         # player_conf_array_length = len(player_conf_array)
         # if (player_conf_array_length % 2) == 0: split_point = player_conf_array_length / 2
@@ -230,14 +236,14 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
         # player_conf_length = len(player_conf)
         insertText(player_conf, -1, player_conf_frame)
         setTextColor("NJCAA Blue", player_conf_frame)
-        setFont("OLD SPORT 02 ATHLETIC NCV Regular", player_conf_frame); setFontSize(6.2, player_conf_frame)
+        setFont("OLD SPORT 02 ATHLETIC NCV Regular", player_conf_frame); setFontSize(6.1, player_conf_frame)
         setLineSpacing(11, player_conf_frame); setTextAlignment(ALIGN_CENTERED, player_conf_frame)
               
         player_count += 1
         if player_count == num_players: break
       if player_count == num_players: break
     if player_count == num_players: break
-    # if page == 0: break
+    # if page == 1: break
     
     
     # right_rect = createRect(576, 36, 36, 720)

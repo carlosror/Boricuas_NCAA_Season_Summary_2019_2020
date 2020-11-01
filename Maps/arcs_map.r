@@ -103,3 +103,4 @@ p <- ggplot(usa_shp_mainland_and_pr) + geom_sf(color = "white", fill = "light gr
 print(p)
 
 brewer.pal(6, "Set1")
+ggsave(filename = "arcs_map.png", width = 8.5, height = 8.5 * (722 / 959), device = "png", units = "in")

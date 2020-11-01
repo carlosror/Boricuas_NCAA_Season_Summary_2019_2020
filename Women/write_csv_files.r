@@ -80,6 +80,10 @@ write.csv(club_60_aces[order(club_60_aces$Division),], file = "club_60_aces.csv"
 write.csv(club_60_blocks[order(club_60_blocks$Division),], file = "club_60_blocks.csv", row.names = FALSE, quote = FALSE, fileEncoding = "UTF-8")
 write.csv(club_900_assists[order(club_900_assists$Division),], file = "club_900_assists.csv", row.names = FALSE, quote = FALSE, fileEncoding = "UTF-8")
 write.csv(club_200_kills_200_assists_200_digs[order(club_200_kills_200_assists_200_digs$Division),], file = "club_200_kills_200_assists_200_digs.csv", row.names = FALSE, quote = FALSE, fileEncoding = "UTF-8")
+# For Bernier article
+all_players_500_digs <- all_players_stats[all_players_stats$D > 499 & !is.na(all_players_stats$D),]
+all_players_500_digs_heights <- merge(all_players_500_digs, all_players[c("Player", "Height")], by = "Player")
+write.csv(all_players_500_digs_heights, file = "all_players_500_digs_heights.csv", row.names = FALSE, quote = FALSE, fileEncoding = "UTF-8")
 
 ## Table of % of conferences with Puerto Rican players in them, by division
 
