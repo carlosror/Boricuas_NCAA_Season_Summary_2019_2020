@@ -47,17 +47,28 @@ with open("Top50.csv") as f:
     player_school = current_line_list[4]
     school_state = current_line_list[5]
     school_division = current_line_list[6]
+    photo_credit = current_line_list[7]
     
     hometown = current_line_list[6]
-    single_player_list = [player_name, image_filename, player_stat, player_rank, player_school, school_division, school_state]
+    single_player_list = [player_name, image_filename, player_stat, player_rank, player_school, school_division, school_state, photo_credit]
     players_list.append(single_player_list)
     players_names_list.append(player_name)
 
-# players_list = [["Karla Seda", ".\Top50\Karla_Seda.jpg", "5.18 digs/set", "21", "Saint Peter's University", "NCAA Division I", "New Jersey"], 
-                # ["LINA BERNIER", ".\Top50\Lina_Bernier.jpg", "5.15 digs/set", "23", "Florida International University", "NCAA Division I", "Florida"], 
-                # ["Neyshlian Román", ".\Top50\Neyshlian_Román.jpg", "5.21 digs/set", "46", "Goldey-Beacom College", "NCAA Division II", "Delaware"],
-                # ["ROCÍO MORO", ".\Top50\Rocío_Moro.jpg", "633 digs", "15", "University of North Florida", "NCAA Division I", "Florida"], 
-                # ["LAURA ROJAS", ".\Top50\Laura_Rojas.jpg", "564 digs", "40", "Southern Illinois University", "NCAA Division I", "Illinois"]]
+def text_frame(pos_x, pos_y, frame_width, frame_height, texts_list, fonts_list, font_sizes, color = "NJCAA Blue", alignment = ALIGN_CENTERED, line_spacing = 24):
+  this_text_frame = createText(pos_x, pos_y, frame_width, frame_height)
+  insertText(texts_list[0] + "\n", -1, this_text_frame)
+  setFont(fonts_list[0], this_text_frame); setFontSize(font_sizes[0], this_text_frame)
+  previous_line_length = getTextLength(this_text_frame)
+  for idx in range(1,len(texts_list)):
+    text_line = texts_list[idx]
+    length_text_line = len(text_line)
+    if idx < len(texts_list) - 1: insertText(text_line + "\n", -1, this_text_frame)
+    else: insertText(text_line, -1, this_text_frame)
+    selectText(previous_line_length, length_text_line, this_text_frame)
+    setFont(fonts_list[idx], this_text_frame)
+    selectText(previous_line_length, length_text_line, this_text_frame)
+    setFontSize(font_sizes[idx], this_text_frame)
+  setTextAlignment(ALIGN_CENTERED, this_text_frame); setTextColor(color, this_text_frame); setLineSpacing(line_spacing, this_text_frame)
 
 def create_banner(banner_height, banner_width, origin_x, origin_y, banner_color, player_list):
   banner = createPolyLine([origin_x, origin_y, (origin_x+banner_width), origin_y, (origin_x+banner_width-banner_height/2), 
@@ -72,6 +83,10 @@ def create_banner(banner_height, banner_width, origin_x, origin_y, banner_color,
   setTextColor(banner_color, player_name)
   setFont("News of the World Wide Italic", player_name); setFontSize(22, player_name)
   setTextAlignment(ALIGN_CENTERED, player_name)
+  
+  # text_frame(origin_x, origin_y + banner_height/4 + banner_height + 2, banner_width, banner_height, 
+             # [player_list[2], "#" + player_list[3], "in " + player_list[5]], ["News of the World Wide Italic" for idx in range(3)], 
+             # [22, 36, 24])
   
   player_stat = createText(origin_x, origin_y + banner_height/4 + banner_height + 2, banner_width, banner_height)
   setText(player_list[2], player_stat)
@@ -99,7 +114,7 @@ def create_banner(banner_height, banner_width, origin_x, origin_y, banner_color,
   
   player_div_ypos = getPosition(player_division)[1]
   player_school_ypos = getPosition(player_school)[1]
-
+    
   logo_name = player_list[4].replace(" ", "_")
   # keep logo height fixed at 40 pt so we know it will always fit; compute logo width using the logo's aspect ratio
   logo_width = 40 / school_logos_dict[logo_name]
@@ -156,6 +171,18 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   
       player_photo = createImage(photo_x, photo_y, 270, 180)
       loadImage(current_player[1], player_photo); setScaleImageToFrame(1, 1, player_photo)
+      
+      photo_credit = "Photo: " + current_player[7].replace("\n", "")
+      photo_credit_length = len(photo_credit)
+      photo_credit_width = 4.0 * photo_credit_length + 2.0
+      photo_credit_banner = createRect(photo_x + 270.0 - photo_credit_width, photo_y, photo_credit_width, 10)
+      setFillColor("NJCAA Blue", photo_credit_banner); setLineColor("None", photo_credit_banner); setFillTransparency(0.70, photo_credit_banner)
+        
+        
+      photo_credit_text = createText(photo_x + 270.0 - photo_credit_width, photo_y + 1.5, photo_credit_width, 12)
+      setText(photo_credit, photo_credit_text)
+      setTextColor("White", photo_credit_text); setFont("Asimov Print C", photo_credit_text); setFontSize(8, photo_credit_text)
+      setTextAlignment(ALIGN_CENTERED, photo_credit_text)
   
       create_banner(banner_height = 24, banner_width = 234, origin_x = origin_x, origin_y = origin_y, 
                     banner_color = "NJCAA Blue", player_list = current_player)
@@ -189,16 +216,17 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     setLineSpacing(7, years1); setLineSpacing(7, years2)  
     
     if page == 0:
-      header_asterisk = createText(345, 9, 12, 36)
+      header_asterisk = createText(347, 9, 12, 36)
       setText("*", header_asterisk); setTextColor("White", header_asterisk); setFontSize(18, header_asterisk)
       
-      footer_asterisk = createText(36, 758, 4, 34)
-      setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(7, footer_asterisk)
+      footer_asterisk = createText(36, 758, 5, 34)
+      setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(10, footer_asterisk)
       
       footnote_frame = createText(40, 758, 536, 35)
       footnote = "Players that were ranked nationally in the top 50 in their division in some statistical category. If a players was in the top 50 in two similar " \
                  "categories, e.g., digs and digs/set, she is featured as a leader in the one she ranked higgher." 
-      setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(7, footnote_frame); setLineSpacing(9, footnote_frame)
+      setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(10, footnote_frame); setLineSpacing(11, footnote_frame)
+      # break
     
     if player_count == num_players: break
     newPage(-1)
