@@ -7,6 +7,7 @@ Berea_College,200,200
 Bethany_College,214,227
 Bloomfield_College,200,200
 Blue_Mountain_College,1200,760
+Briar_Cliff_University,800,717
 Bryant_&_Stratton_College,648,648
 Cal_State_University_Los_Angeles,1200,1133
 Catholic_University_of_America,512,622
@@ -28,6 +29,7 @@ Daytona_State_College,197,150
 Daytona_State_College_3,452,381
 Delaware_State_University,1200,912
 Dickinson_College,469,410
+Eastern_Connecticut_State_University,198,180
 Eastern_Florida_State_College,2670,2407
 East_Central_University,458,342
 Edward_Waters_College,168,119
@@ -48,8 +50,10 @@ Gulf_Coast_State_College,320,162
 Hannibal-Lagrange_University,146,187
 Hillsborough_Community_College,268,268
 Holy_Family_University,319,145
+Hood_College,600,678
 Independence_Community_College,548,532
 Indiana_University_Northwest,180,136
+John_Jay_College,1472,1309
 Kansas_City_Kansas_Community_College,129,207
 Keiser_University,645,898
 Lake-Sumter_State_College,174,230
@@ -58,15 +62,18 @@ Laredo_College,1450,1000
 Lasell_University,250,363
 Lees_McRae_College,300,283
 Lincoln_Memorial_University,384,302
+Loyola_University_New_Orleans,1587,1200
 Maine_Maritime_Academy,487,330
 Manhattanville_College,512,512
 Manhattan_College,1225,1024
+Medgar_Evers_College,186,186
 Mercy_College,172,192
 Mineral_Area_College,495,551
 Missouri_Baptist_University,464,420
 Monroe_College,260,190
 Morgan_State_University,658,626
 Navarro_College,2754,2419
+New_Jersey_City_University,157,194
 New_Mexico_Military_Institute,548,770
 Norfolk_State_University,1200,1200
 Northeastern_Oklahoma_A&M_College,1983,2000
@@ -117,6 +124,7 @@ University_of_Tampa,1031,1024
 University_of_the_Sciences,999,493
 Valdosta_State_University,1280,992
 Vernon_College,200,231
+Webber_International_University,1035,584
 Western_Connecticut_State_University,256,256
 Western_Nebraska_Community_College,799,543
 West_Virginia_University_Institute_of_Technology,239,205
