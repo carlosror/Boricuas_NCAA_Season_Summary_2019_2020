@@ -97,7 +97,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     setFillColor("White", center_rect); setLineColor("White", center_rect)
     
     page_header = createText(36, 9, 540, 36)
-    setText("NCAA DIII Action", page_header)
+    setText("NCAA Division III Action", page_header)
     setTextColor("White", page_header)
     setFont("OLD SPORT 02 ATHLETIC NCV Regular", page_header); setFontSize(24, page_header)
     setTextAlignment(ALIGN_CENTERED, page_header)
