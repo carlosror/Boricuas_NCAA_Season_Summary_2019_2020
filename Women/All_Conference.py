@@ -55,8 +55,9 @@ with open("All_Conference.csv") as f:
     player_conf = current_line_list[3]
     school_division = current_line_list[4]
     player_award = current_line_list[5]
+    photo_credit = current_line_list[7]
     
-    single_player_list = [player_name, image_filename, player_school, school_state, player_conf, school_division, player_award]
+    single_player_list = [player_name, image_filename, player_school, school_state, player_conf, school_division, player_award, photo_credit]
     players_list.append(single_player_list)
     players_names_list.append(player_name)
 
@@ -99,13 +100,13 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
       header_asterisk = createText(465, 9, 12, 36)
       setText("*", header_asterisk); setTextColor("White", header_asterisk); setFontSize(18, header_asterisk)
       
-      footer_asterisk = createText(36, 758, 4, 34)
-      setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(7, footer_asterisk)
+      footer_asterisk = createText(36, 758, 5, 34)
+      setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(10, footer_asterisk)
       
       footnote_frame = createText(40, 758, 536, 35)
       footnote = "Some of the NJCAA awards are called All-Region or All-District, instead of All-Conference. For some of the NJCAA conferences, " \
                  "like regions 2 and 24 I could not find the announcement." 
-      setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(7, footnote_frame); setLineSpacing(9, footnote_frame)    
+      setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(10, footnote_frame); setLineSpacing(11, footnote_frame)    
     
     for row in range(2):
       for col in range(3):
@@ -124,7 +125,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
         loadImage("Star.png", star_1); setScaleImageToFrame(1, 1, star_1)
         star_2 = createImage(x_pos_tile + 149, y_pos_tile + 2, 20, 20)
         loadImage("Star.png", star_2); setScaleImageToFrame(1, 1, star_2)
-        
+                
         all_conf_banner_2_height = 15
         all_conf_banner_2 = createRect(x_pos_tile, y_pos_tile + all_conf_banner_height, tile_width, all_conf_banner_2_height)
         setFillColor("Darker Gray", all_conf_banner_2); setLineColor("Darker Gray", all_conf_banner_2)
@@ -138,6 +139,18 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
         photo_y = y_pos_tile + all_conf_banner_height + all_conf_banner_2_height
         player_photo = createImage(photo_x, photo_y, 170, 250)
         loadImage(current_player[1], player_photo); setScaleImageToFrame(1, 1, player_photo)
+        
+        photo_credit = "Photo: " + current_player[7].replace("\n", "")
+        photo_credit_length = len(photo_credit)
+        photo_credit_width = 3.0 * photo_credit_length + 2.5
+        photo_credit_banner = createRect(photo_x + 170.0 - photo_credit_width, photo_y, photo_credit_width, 8)
+        setFillColor("NJCAA Blue", photo_credit_banner); setLineColor("None", photo_credit_banner); setFillTransparency(0.70, photo_credit_banner)
+        
+        
+        photo_credit_text = createText(photo_x + 170.0 - photo_credit_width, photo_y + 1.5, photo_credit_width, 10)
+        setText(photo_credit, photo_credit_text)
+        setTextColor("White", photo_credit_text); setFont("Asimov Print C", photo_credit_text); setFontSize(6, photo_credit_text)
+        setTextAlignment(ALIGN_CENTERED, photo_credit_text)
         
         division_x = photo_x + 5
         if (current_player[5].replace("\n","") in ["NCAA DI", "NCAA DII", "NCAA DIII", "NJCAA DI", "NJCAA DII"]):
