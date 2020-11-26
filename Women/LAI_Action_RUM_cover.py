@@ -45,4 +45,5 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   text_frame(576, 6.7, 36, 36, ["2019", "-", "2020"], ["OLD SPORT 02 ATHLETIC NCV Regular" for idx in range(3)], [11,11, 11], 
              colors = ["White" for idx in range(3)], line_spacing = 7)
   insert_image(0, 36, 613, 721, "RUM_cover.jpg")
+  insert_image(20, 56, 50, 50, "./Division_logos/Liga_Atlética_Interuniversitaria_logo.png")
   text_frame(0, 760, 612, 40, ["Khris Justiniano"], ["Playball Regular"], [32], colors = ["White"])

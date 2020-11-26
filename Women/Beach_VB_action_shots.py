@@ -51,8 +51,9 @@ with open("Beach_VB_action.csv") as f:
     player_school = current_line_list[1]
     school_state = current_line_list[2]
     school_division = current_line_list[3]
+    photo_credit = current_line_list[4]
     
-    single_player_list = [player_name, image_filename, player_school, school_state, school_division]
+    single_player_list = [player_name, image_filename, player_school, school_state, school_division, photo_credit]
     players_list.append(single_player_list)
     players_names_list.append(player_name)
 
@@ -86,7 +87,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     bottom_rect = createRect(0, 756, 612, 36)
     setFillColor("NJCAA Blue", bottom_rect); setLineColor("NJCAA Blue", bottom_rect)
     center_rect = createRect(0, 36, 612, 720)
-    setFillColor("NJCAA Gray", center_rect); setLineColor("NJCAA Gray", center_rect)
+    setFillColor("White", center_rect); setLineColor("White", center_rect)
     
     page_header = createText(36, 9, 540, 36)
     setText("Beach Volleyball Action", page_header)
@@ -102,19 +103,19 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     setLineSpacing(7, years1); setLineSpacing(7, years2)  
     
     # Asterisk for Bernier and Torruella
-    footer_asterisk = createText(36, 764, 4, 34)
-    setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(7, footer_asterisk)
+    footer_asterisk = createText(36, 764, 5, 34)
+    setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(10, footer_asterisk)
     footnote_frame = createText(40, 764, 536, 35)
     footnote = "Eva Torruella and Lina Bernier represented Puerto Rico in beach volleyball at the 2015 Panamerican Games in Toronto, Canada."
-    setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(7, footnote_frame)
+    setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(10, footnote_frame); setLineSpacing(12, footnote_frame)
     
     for row in range(4):
       for col in range(2):
         current_player = players_list[player_count]
-        photo_width = 270; photo_height = 180
-        photo_x = 36 + col * (photo_width)
+        photo_width = 270; photo_height = 177
+        photo_x = 38 + col * (photo_width)
         # photo_y = 36 + 20 + row * (250 + 100)
-        photo_y = 36 + row * (photo_height)
+        photo_y = 36 + row * (photo_height + 4)
         player_photo = createImage(photo_x, photo_y, photo_width, photo_height)
         loadImage(current_player[1], player_photo); setScaleImageToFrame(1, 1, player_photo)
         
@@ -131,7 +132,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
         banner_x = photo_x + (photo_width - banner_width) / 2.0
         banner_y = photo_y + (photo_height - banner_height)
         player_banner = createRect(banner_x, banner_y, banner_width, banner_height)
-        setFillColor("NJCAA Gray", player_banner); setLineColor("None", player_banner)
+        setFillColor("White", player_banner); setLineColor("None", player_banner)
         
         logo_name = current_player[2].replace(" ", "_")
         if (school_logos_dict[logo_name] < 0.7):
@@ -177,6 +178,18 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
             bernier_asterisk = createText(492, 189, 12, 36)
             setText("*", bernier_asterisk); setTextColor("NJCAA Blue", bernier_asterisk); setFontSize(12, bernier_asterisk)
               
+        photo_credit = "Photo: " + current_player[5].replace("\n", "")
+        photo_credit_length = len(photo_credit)
+        photo_credit_width = 4.0 * photo_credit_length + 6.0
+        photo_credit_banner = createRect(photo_x + 265.54 - photo_credit_width, photo_y, photo_credit_width, 10)
+        setFillColor("NJCAA Blue", photo_credit_banner); setLineColor("None", photo_credit_banner); setFillTransparency(0.70, photo_credit_banner)
+        
+        
+        photo_credit_text = createText(photo_x + 265.54 - photo_credit_width, photo_y + 1.5, photo_credit_width, 12)
+        setText(photo_credit, photo_credit_text)
+        setTextColor("White", photo_credit_text); setFont("Asimov Print C", photo_credit_text); setFontSize(8, photo_credit_text)
+        setTextAlignment(ALIGN_CENTERED, photo_credit_text)
+        
         player_count += 1
         if player_count == num_players: break
       if player_count == num_players: break
