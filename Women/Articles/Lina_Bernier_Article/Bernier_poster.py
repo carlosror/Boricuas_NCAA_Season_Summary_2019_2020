@@ -60,7 +60,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   draw_line(341, line_1_ypos, 341 + 30, line_1_ypos, line_type = LINE_SOLID, color = "Black", width = 2)
   
   text_2_ypos = text_1_ypos + text_1_height + spacing
-  text_frame(341, text_2_ypos, 270, text_1_height, ["1x", "CCSA All-Tournament**"], ["Pink Sans 130", "Arial Regular"], 
+  text_frame(341, text_2_ypos, 270, text_1_height, ["2x", "CCSA All-Tournament**"], ["Pink Sans 130", "Arial Regular"], 
              [60, 25], colors = ["NJCAA Blue", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
   
   line_2_ypos = text_2_ypos + text_1_height + 12
@@ -74,7 +74,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   draw_line(341, line_3_ypos, 341 + 30, line_3_ypos, line_type = LINE_SOLID, color = "Black", width = 2)
   
   text_4_ypos = text_3_ypos + text_1_height + spacing
-  text_frame(341, text_4_ypos, 270, text_1_height + 30, ["5x", "Commissioner's Academic Medal^"], ["Pink Sans 130", "Arial Regular"], 
+  text_frame(341, text_4_ypos, 270, text_1_height + 30, ["5x", "C-USA Commissioner's Academic Medal^"], ["Pink Sans 130", "Arial Regular"], 
              [60, 25], colors = ["NJCAA Blue", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
   
   line_4_ypos = text_4_ypos + text_1_height + 30 + 12
@@ -84,5 +84,5 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   text_frame(341, text_5_ypos, 270, text_1_height + 30, ["1x", "Google Cloud Academic All-District First Team^^"], ["Pink Sans 130", "Arial Regular"], 
              [60, 25], colors = ["NJCAA Blue", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
              
-  footer = "*Only 2 full seasons as libero + 1 season as OH **Coastal Collegiate Sports Association: swimming, diving, and beach volleyball ***Awarded to Bernier and beach v-ball partner Erika Zembyla in 2019 for winning at least 75% of 15 or more matches ^2016-2020, Awarded to Conference-USA athletes with GPA of 3.75 or better ^^2018"
+  footer = "*Only 2 full seasons as libero + 1 season as OH **2017 and 2019 ***Awarded to Bernier and beach v-ball partner Erika Zembyla in 2019 for winning\n at least 75% of 15 or more matches on court #4 ^2016-2020, Awarded to Conference-USA athletes with GPA of 3.75 or better ^^2018"
   text_frame(15, 775, 600, 25, [footer], ["Arial Regular"], [8], colors = ["Black"], line_spacing = 9, alignment = ALIGN_LEFT)
