@@ -74,7 +74,7 @@ p_trujillo <- ggplot(trujillo_df.m) + geom_bar(aes(x = Date, y = value, fill = v
      scale_fill_manual(values=colorPalette) +
      theme_plot() + 
      guides(color = guide_legend(nrow = 1)) +
-     ggtitle(label = "Two weeks in May", subtitle = "Setter Mariana Trujillo's busy second half of \nMay 2019 helped Puerto Rico qualify for the U18 Worlds") + 
+     ggtitle(label = "Two Weeks in May", subtitle = "Setter Mariana Trujillo's busy second half of \nMay 2019 helped Puerto Rico qualify for the U18 Worlds") + 
      geom_vline(xintercept = 5.5, linetype = "dashed", size = 1.2, color = "gray") +
      geom_label(label = paste("U20 Pan American Cup\nLima, ", Peru), x = 0.70, y = 35, size = 4, hjust = "left") +
      geom_label(label = paste("U18 Pan American Cup\nDurango, ", Mexico), x = 5.7, y = 35, size = 4, hjust = "left") +
