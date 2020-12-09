@@ -27,7 +27,7 @@ with open("./Conference_Logos/filesizes_png.csv") as f:
 
 players_list = []
 players_names_list = []
-with open("club_400_kills.csv") as f:
+with open("club_400_kills_photo.csv") as f:
   next(f) # skip headers row
   for line in f:
     current_line_list = line.split(",")
@@ -55,8 +55,9 @@ with open("club_400_kills.csv") as f:
     player_conf = current_line_list[3]
     school_division = current_line_list[4]
     player_stat = current_line_list[8]
+    player_photo = current_line_list[24]
     
-    single_player_list = [player_name, image_filename, player_school, school_state, player_conf, school_division, player_stat]
+    single_player_list = [player_name, image_filename, player_school, school_state, player_conf, school_division, player_stat, player_photo]
     players_list.append(single_player_list)
     players_names_list.append(player_name)
 
@@ -111,6 +112,18 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
         photo_y = 72 + 25 + row * (304 + 25)
         player_photo = createImage(photo_x, photo_y, 170, 250)
         loadImage(current_player[1], player_photo); setScaleImageToFrame(1, 1, player_photo)
+        
+        photo_credit = "Photo: " + current_player[7].replace("\n", "")
+        photo_credit_length = len(photo_credit)
+        photo_credit_width = 3.0 * photo_credit_length + 2.5
+        photo_credit_banner = createRect(photo_x + 170.0 - photo_credit_width, photo_y + 250 - 8, photo_credit_width, 8)
+        setFillColor("NJCAA Blue", photo_credit_banner); setLineColor("None", photo_credit_banner); setFillTransparency(0.70, photo_credit_banner)
+        
+        
+        photo_credit_text = createText(photo_x + 170.0 - photo_credit_width, photo_y + 250 - 8 + 1.5, photo_credit_width, 10)
+        setText(photo_credit, photo_credit_text)
+        setTextColor("White", photo_credit_text); setFont("Asimov Print C", photo_credit_text); setFontSize(6, photo_credit_text)
+        setTextAlignment(ALIGN_CENTERED, photo_credit_text)
         
         division_x = photo_x + 5
         if (current_player[5].replace("\n","") in ["NCAA DI", "NCAA DII", "NCAA DIII", "NJCAA DI", "NJCAA DII"]):
