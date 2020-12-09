@@ -156,14 +156,14 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
       header_asterisk = createText(434, 9, 12, 36)
       setText("*", header_asterisk); setTextColor("White", header_asterisk); setFontSize(18, header_asterisk)
       
-      footer_asterisk = createText(36, 758, 4, 34)
-      setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(7, footer_asterisk)
+      footer_asterisk = createText(36, 758, 5, 34)
+      setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(10, footer_asterisk)
       
       footnote_frame = createText(40, 758, 536, 35)
       footnote = "Players from 4-year institutions in the NAIA or NCAA that were in the top 10 in their conference in some statistical category. " \
                  "If a player was in the top 10 in two similar categories, e.g., digs and digs/set, she is featured as a leader in the one she " \
                  "ranks higher."
-      setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(7, footnote_frame); setLineSpacing(9, footnote_frame)
+      setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(10, footnote_frame); setLineSpacing(9, footnote_frame)
     
     for row in range(2):
       for col in range(3):

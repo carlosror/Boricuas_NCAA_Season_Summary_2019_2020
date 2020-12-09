@@ -18,7 +18,8 @@ school_logos_dict = {"American_International_College": 859.0/1200, "Bryant_&_Str
                      "College_of_Coastal_Georgia": 130.0/175, "St._Andrews_University": 132.0/165, "Western_Nebraska_Community_College": 543.0/799, 
                      "Florida_International_University": 588.0/593, "Southern_Illinois_University": 717.0/869, "Saint_Peter's_University": 251.0/326, 
                      "University_of_North_Florida": 235.0/248, "Florida_State_College_at_Jacksonville": 209.0/199, "Bethany_College": 227.0/214,
-                     "Indiana_University_Northwest": 136.0/180, "Chestnut_Hill_College": 170.0/176, "University_of_Evansville": 435.0/440}
+                     "Indiana_University_Northwest": 136.0/180, "Chestnut_Hill_College": 170.0/176, "University_of_Evansville": 435.0/440, 
+                     "Western_Connecticut_State_University": 256.0 / 256.0}
 
 players_list = []
 players_names_list = []
@@ -224,7 +225,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
       
       footnote_frame = createText(40, 758, 536, 35)
       footnote = "Players that were ranked nationally in the top 50 in their division in some statistical category. If a players was in the top 50 in two similar " \
-                 "categories, e.g., digs and digs/set, she is featured as a leader in the one she ranked higgher." 
+                 "categories, e.g., digs and digs/set, she is featured as a leader in the one she ranked higher." 
       setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(10, footnote_frame); setLineSpacing(11, footnote_frame)
       # break
     
