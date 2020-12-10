@@ -48,6 +48,22 @@ with open("Beach_VB_action.csv") as f:
       else:
         image_filename = "./Beach_VB_action/" + first_name + "_" + first_last_name + ".jpg"
       
+    negron_santos = "Alejandra Negrón & Karla Santos"; santos_negron = "Karla Santos & Alejandra Negrón"
+    negron_santos_2 = "Alejandra Negrón & Karla Santos 2"; negron_santos_3 = "Alejandra Negrón & Karla Santos 3"
+    
+    if (current_line_list[0] == negron_santos):
+      player_name = negron_santos
+      image_filename = "./Beach_VB_action/" + negron_santos.replace(" ", "_") + ".jpg"
+    elif (current_line_list[0] == santos_negron):
+      player_name = santos_negron
+      image_filename = "./Beach_VB_action/" + santos_negron.replace(" ", "_") + ".jpg"
+    elif (current_line_list[0] == negron_santos_2):
+      player_name = negron_santos
+      image_filename = "./Beach_VB_action/" + negron_santos_2.replace(" ", "_") + ".jpg"
+    elif (current_line_list[0] == negron_santos_3):
+      player_name = negron_santos
+      image_filename = "./Beach_VB_action/" + negron_santos_3.replace(" ", "_") + ".jpg"
+    
     player_school = current_line_list[1]
     school_state = current_line_list[2]
     school_division = current_line_list[3]
@@ -65,6 +81,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   defineColor("NJCAA Gray 2", 0, 0, 0, 153)
   defineColor("NJCAA Blue 2", 221, 168, 15, 30)
   defineColor("Darker Gray", 0, 0, 0, 64)
+  defineColor("Beach VB", 154, 50, 0, 0)
   
   # top_right_rect = createRect(306, 36, 306, 180)
   # setFillColor("NJCAA Gray", top_right_rect); setLineColor("NJCAA Gray", top_right_rect)
@@ -83,9 +100,9 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   player_count = 0
   for page in range(num_pages):
     top_rect = createRect(0, 0, 612, 36)
-    setFillColor("NJCAA Blue", top_rect); setLineColor("NJCAA Blue", top_rect)
+    setFillColor("Beach VB", top_rect); setLineColor("Beach VB", top_rect)
     bottom_rect = createRect(0, 756, 612, 36)
-    setFillColor("NJCAA Blue", bottom_rect); setLineColor("NJCAA Blue", bottom_rect)
+    setFillColor("Beach VB", bottom_rect); setLineColor("Beach VB", bottom_rect)
     center_rect = createRect(0, 36, 612, 720)
     setFillColor("White", center_rect); setLineColor("White", center_rect)
     
@@ -103,11 +120,12 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     setLineSpacing(7, years1); setLineSpacing(7, years2)  
     
     # Asterisk for Bernier and Torruella
-    footer_asterisk = createText(36, 764, 5, 34)
-    setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(10, footer_asterisk)
-    footnote_frame = createText(40, 764, 536, 35)
-    footnote = "Eva Torruella and Lina Bernier represented Puerto Rico in beach volleyball at the 2015 Panamerican Games in Toronto, Canada."
-    setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(10, footnote_frame); setLineSpacing(12, footnote_frame)
+    if page == 0:
+      footer_asterisk = createText(36, 764, 5, 34)
+      setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(10, footer_asterisk)
+      footnote_frame = createText(40, 764, 536, 35)
+      footnote = "Eva Torruella and Lina Bernier represented Puerto Rico in beach volleyball at the 2015 Panamerican Games in Toronto, Canada."
+      setText(footnote, footnote_frame); setTextColor("White", footnote_frame); setFontSize(10, footnote_frame); setLineSpacing(12, footnote_frame)
     
     for row in range(4):
       for col in range(2):
@@ -130,6 +148,8 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
                 
         banner_width = 170; banner_height = 30
         banner_x = photo_x + (photo_width - banner_width) / 2.0
+        if (current_player[0] in [negron_santos, santos_negron, negron_santos_2, negron_santos_3]):
+          banner_width = 265.54; banner_x = photo_x
         banner_y = photo_y + (photo_height - banner_height)
         player_banner = createRect(banner_x, banner_y, banner_width, banner_height)
         setFillColor("White", player_banner); setLineColor("None", player_banner)

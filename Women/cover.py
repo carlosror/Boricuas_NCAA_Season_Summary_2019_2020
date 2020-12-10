@@ -32,8 +32,8 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   
   title_xpos = 36; title_ypos = 4 * photo_height + 25; title_width = 540; title_height = 100
   title = createText(title_xpos, title_ypos, title_width, title_height)
-  insertText("Puerto Rico Women College Volleyball", -1, title)
-  setFont("OLD SPORT 02 ATHLETIC NCV Regular", title); setFontSize(50, title); setTextColor("White", title)
+  insertText("Puerto Rico Women's College Volleyball", -1, title)
+  setFont("OLD SPORT 02 ATHLETIC NCV Regular", title); setFontSize(48, title); setTextColor("White", title)
   setTextAlignment(ALIGN_CENTERED, title); setLineSpacing(50, title)
   subtitle = createText(title_xpos, title_ypos + title_height + 10, title_width, title_height / 1.5)
   insertText("Academic Year 2019-2020", -1, subtitle)
