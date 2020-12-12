@@ -203,8 +203,8 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     # center_rect = createRect(0, 36, 612, 720)
     # setFillColor("NJCAA Gray", center_rect); setLineColor("NJCAA Gray", center_rect)
     
-    page_header = createText(36, 9, 540, 36)
-    setText("Top 50", page_header)
+    page_header = createText(36, 8, 540, 36)
+    setText("Nationally Ranked in Division Top 50*", page_header)
     setTextColor("White", page_header)
     setFont("OLD SPORT 02 ATHLETIC NCV Regular", page_header); setFontSize(24, page_header)
     setTextAlignment(ALIGN_CENTERED, page_header)
@@ -217,8 +217,8 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     setLineSpacing(7, years1); setLineSpacing(7, years2)  
     
     if page == 0:
-      header_asterisk = createText(347, 9, 12, 36)
-      setText("*", header_asterisk); setTextColor("White", header_asterisk); setFontSize(18, header_asterisk)
+      # header_asterisk = createText(347, 9, 12, 36)
+      # setText("*", header_asterisk); setTextColor("White", header_asterisk); setFontSize(18, header_asterisk)
       
       footer_asterisk = createText(36, 758, 5, 34)
       setText("*", footer_asterisk); setTextColor("White", footer_asterisk); setFontSize(10, footer_asterisk)

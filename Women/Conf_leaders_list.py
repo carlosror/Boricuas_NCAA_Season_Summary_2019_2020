@@ -63,7 +63,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     setFillColor("NJCAA Blue", top_rect); setLineColor("NJCAA Blue", top_rect)
     
     page_header = createText(36, 9, 540, 36)
-    setText("Conference Leaders List", page_header)
+    setText("Conference Leaders", page_header)
     setTextColor("White", page_header)
     setFont("OLD SPORT 02 ATHLETIC NCV Regular", page_header); setFontSize(24, page_header)
     setTextAlignment(ALIGN_CENTERED, page_header)

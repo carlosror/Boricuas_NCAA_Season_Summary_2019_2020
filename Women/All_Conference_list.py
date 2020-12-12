@@ -9,7 +9,7 @@ def draw_line(x1, y1, x2, y2, line_type = LINE_DASH, width = 1, color = "Map Blu
   setLineWidth(width, this_line)
 
 players_list = []
-with open("Top50.csv") as f:
+with open("All_Conference.csv") as f:
   next(f) # skip headers row
   for line in f:
     current_line_list = line.split(",")
@@ -21,15 +21,12 @@ with open("Top50.csv") as f:
     else:
       player_name = first_name + " " + first_last_name
       
-    player_stat = current_line_list[1] + " " + current_line_list[2]
-    player_rank = current_line_list[3]
-    player_school = current_line_list[4]
-    school_state = current_line_list[5]
-    school_division = current_line_list[6]
-    photo_credit = current_line_list[7]
+    player_school = current_line_list[1]
+    player_conf = current_line_list[3]
+    player_award = current_line_list[5]
     
     hometown = current_line_list[6]
-    single_player_list = [player_name, player_school, school_state, school_division, player_stat, player_rank]
+    single_player_list = [player_name, player_school, player_conf, player_award]
     players_list.append(single_player_list)
     
 if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, FIRSTPAGERIGHT, 1):
@@ -65,7 +62,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     setFillColor("NJCAA Blue", top_rect); setLineColor("NJCAA Blue", top_rect)
     
     page_header = createText(36, 9, 540, 36)
-    setText("Nationally Ranked in Division Top 50", page_header)
+    setText("All-Conference", page_header)
     setTextColor("White", page_header)
     setFont("OLD SPORT 02 ATHLETIC NCV Regular", page_header); setFontSize(24, page_header)
     setTextAlignment(ALIGN_CENTERED, page_header)
@@ -93,16 +90,12 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     
     player_name_frame_width = 90; player_name_frame_xpos = 36 + 4
     player_name_frame = createText(player_name_frame_xpos, offset + 5, player_name_frame_width, num_rows * row_height)
-    player_school_frame_width = 160; player_school_frame_xpos = player_name_frame_xpos + player_name_frame_width
+    player_school_frame_width = 155; player_school_frame_xpos = player_name_frame_xpos + player_name_frame_width
     player_school_frame = createText(player_school_frame_xpos, offset + 5, player_school_frame_width, num_rows * row_height)
-    player_school_state_frame_width = 70; player_school_state_frame_xpos = player_school_frame_width + player_school_frame_xpos
-    player_school_state_frame = createText(player_school_state_frame_xpos, offset + 5, player_school_state_frame_width, num_rows * row_height)
-    player_division_frame_width = 80; player_division_frame_xpos = player_school_state_frame_width + player_school_state_frame_xpos
-    player_division_frame = createText(player_division_frame_xpos, offset + 5, player_division_frame_width, num_rows * row_height)
-    player_stat_frame_width = 80; player_stat_frame_xpos = player_division_frame_width + player_division_frame_xpos
-    player_stat_frame = createText(player_stat_frame_xpos, offset + 5, player_stat_frame_width, num_rows * row_height)
-    player_rank_frame_width = 50; player_rank_frame_xpos = player_stat_frame_width + player_stat_frame_xpos
-    player_rank_frame = createText(player_rank_frame_xpos, offset + 5, player_rank_frame_width, num_rows * row_height)
+    player_conf_frame_width = 205; player_conf_frame_xpos = player_school_frame_xpos + player_school_frame_width
+    player_conf_frame = createText(player_conf_frame_xpos, offset + 5, player_conf_frame_width, num_rows * row_height)
+    player_award_frame_width = 90; player_award_frame_xpos = player_conf_frame_width + player_conf_frame_xpos
+    player_award_frame = createText(player_award_frame_xpos, offset + 5, player_award_frame_width, num_rows * row_height)
     
     # Headers
     player_name_frame_header = createText(player_name_frame_xpos, offset - header_height + 4, player_name_frame_width, header_height)
@@ -113,31 +106,21 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     insertText("School", -1, player_school_frame_header)
     setFont("Asimov Print C", player_school_frame_header); setFontSize(12, player_school_frame_header)
     setTextAlignment(ALIGN_CENTERED, player_school_frame_header); setTextColor("NJCAA Blue", player_school_frame_header);
-    player_school_state_frame_header = createText(player_school_state_frame_xpos, offset - header_height + 4, player_school_state_frame_width, header_height)
-    insertText("State", -1, player_school_state_frame_header)
-    setFont("Asimov Print C", player_school_state_frame_header); setFontSize(12, player_school_state_frame_header)
-    setTextAlignment(ALIGN_CENTERED, player_school_state_frame_header); setTextColor("NJCAA Blue", player_school_state_frame_header);
-    player_division_frame_header = createText(player_division_frame_xpos, offset - header_height + 4, player_division_frame_width, header_height)
-    insertText("Division", -1, player_division_frame_header)
-    setFont("Asimov Print C", player_division_frame_header); setFontSize(12, player_division_frame_header)
-    setTextAlignment(ALIGN_CENTERED, player_division_frame_header); setTextColor("NJCAA Blue", player_division_frame_header);
-    player_stat_frame_header = createText(player_stat_frame_xpos, offset - header_height + 4, player_stat_frame_width, header_height)
-    insertText("Statistic", -1, player_stat_frame_header)
-    setFont("Asimov Print C", player_stat_frame_header); setFontSize(12, player_stat_frame_header)
-    setTextAlignment(ALIGN_CENTERED, player_stat_frame_header); setTextColor("NJCAA Blue", player_stat_frame_header);
-    player_rank_frame_header = createText(player_rank_frame_xpos, offset - header_height + 4, player_rank_frame_width, header_height)
-    insertText("Rank", -1, player_rank_frame_header)
-    setFont("Asimov Print C", player_rank_frame_header); setFontSize(12, player_rank_frame_header)
-    setTextAlignment(ALIGN_CENTERED, player_rank_frame_header); setTextColor("NJCAA Blue", player_rank_frame_header);
+    player_conf_frame_header = createText(player_conf_frame_xpos, offset - header_height + 4, player_conf_frame_width, header_height)
+    insertText("Conference", -1, player_conf_frame_header)
+    setFont("Asimov Print C", player_conf_frame_header); setFontSize(12, player_conf_frame_header)
+    setTextAlignment(ALIGN_CENTERED, player_conf_frame_header); setTextColor("NJCAA Blue", player_conf_frame_header);
+    player_award_frame_header = createText(player_award_frame_xpos, offset - header_height + 4, player_award_frame_width, header_height)
+    insertText("Award", -1, player_award_frame_header)
+    setFont("Asimov Print C", player_award_frame_header); setFontSize(12, player_award_frame_header)
+    setTextAlignment(ALIGN_CENTERED, player_award_frame_header); setTextColor("NJCAA Blue", player_award_frame_header);
       
     for row in range(num_rows):
       current_player = players_list[player_count]
       insertText(current_player[0] + 2 *"\n", -1, player_name_frame)
       insertText(current_player[1] + 2 *"\n", -1, player_school_frame)
-      insertText(current_player[2] + 2 *"\n", -1, player_school_state_frame)
-      insertText(current_player[3] + 2 *"\n", -1, player_division_frame)
-      insertText(current_player[4] + 2 *"\n", -1, player_stat_frame)
-      insertText(current_player[5] + 2 *"\n", -1, player_rank_frame)
+      insertText(current_player[2] + 2 *"\n", -1, player_conf_frame)
+      insertText(current_player[3] + 2 *"\n", -1, player_award_frame)
       player_count += 1
       if player_count == num_players: break
     
@@ -145,23 +128,19 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
     setTextColor("NJCAA Blue", player_name_frame); setLineSpacing(9.005, player_name_frame)
     setFont("Asimov Print C", player_school_frame); setFontSize(8.5, player_school_frame); setTextAlignment(ALIGN_CENTERED, player_school_frame)
     setTextColor("NJCAA Blue", player_school_frame); setLineSpacing(9.005, player_school_frame)
-    setFont("Asimov Print C", player_school_state_frame); setFontSize(8.5, player_school_state_frame); setTextAlignment(ALIGN_CENTERED, player_school_state_frame)
-    setTextColor("NJCAA Blue", player_school_state_frame); setLineSpacing(9.005, player_school_state_frame)
-    setFont("Asimov Print C", player_division_frame); setFontSize(8.5, player_division_frame); setTextAlignment(ALIGN_CENTERED, player_division_frame)
-    setTextColor("NJCAA Blue", player_division_frame); setLineSpacing(9.005, player_division_frame)
-    setFont("Asimov Print C", player_stat_frame); setFontSize(8.5, player_stat_frame); setTextAlignment(ALIGN_CENTERED, player_stat_frame)
-    setTextColor("NJCAA Blue", player_stat_frame); setLineSpacing(9.005, player_stat_frame)
-    setFont("Asimov Print C", player_rank_frame); setFontSize(8.5, player_rank_frame); setTextAlignment(ALIGN_CENTERED, player_rank_frame)
-    setTextColor("NJCAA Blue", player_rank_frame); setLineSpacing(9.005, player_rank_frame)
+    setFont("Asimov Print C", player_conf_frame); setFontSize(8.5, player_conf_frame); setTextAlignment(ALIGN_CENTERED, player_conf_frame)
+    setTextColor("NJCAA Blue", player_conf_frame); setLineSpacing(9.005, player_conf_frame)
+    setFont("Asimov Print C", player_award_frame); setFontSize(8.5, player_award_frame); setTextAlignment(ALIGN_CENTERED, player_award_frame)
+    setTextColor("NJCAA Blue", player_award_frame); setLineSpacing(9.005, player_award_frame)
     
     bottom_rect = createRect(0, 756, 612, 36)
     setFillColor("NJCAA Blue", bottom_rect); setLineColor("NJCAA Blue", bottom_rect)
     if player_count == num_players: 
       draw_line(36, bottom_line_pos, 576, bottom_line_pos, line_type = LINE_SOLID, color = "NJCAA Blue")
-      for xpos in [36, player_school_frame_xpos, player_school_state_frame_xpos, player_division_frame_xpos, player_stat_frame_xpos, player_rank_frame_xpos, 576]:
+      for xpos in [36, player_school_frame_xpos, player_conf_frame_xpos, player_award_frame_xpos, 576]:
         draw_line(xpos, bottom_line_pos, xpos, 36, line_type = LINE_SOLID, color = "NJCAA Blue")
       break
     else:
-      for xpos in [36, player_school_frame_xpos, player_school_state_frame_xpos, player_division_frame_xpos, player_stat_frame_xpos, player_rank_frame_xpos, 576]:
+      for xpos in [36, player_school_frame_xpos, player_conf_frame_xpos, player_award_frame_xpos, 576]:
         draw_line(xpos, 36, xpos, 756, line_type = LINE_SOLID, color = "NJCAA Blue")
     newPage(-1)
