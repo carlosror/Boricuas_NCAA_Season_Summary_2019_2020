@@ -40,50 +40,52 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   defineColor("NJCAA Gray 2", 0, 0, 0, 153)
   defineColor("NJCAA Blue 2", 221, 168, 15, 30)
   defineColor("Darker Gray", 0, 0, 0, 64)
+  defineColor("Maine_1", 212, 144, 6, 12)
+  defineColor("Maine_2", 14, 21, 184, 1)
   
   center_rect = createRect(0, 0, 612, 792)
-  setFillColor("NJCAA Gray", center_rect); setLineColor("NJCAA Gray", center_rect)
+  setFillColor("White", center_rect); setLineColor("White", center_rect)
   top_rect = createRect(15, 15, 588, 124)
-  setFillColor("NJCAA Blue", top_rect); setLineColor("NJCAA Blue", top_rect)
+  setFillColor("Maine_1", top_rect); setLineColor("Maine_1", top_rect)
   
-  insert_image(36, 41, 80.68, 80, "./../../School_Logos/Florida_International_University.png")
+  insert_image(36, 47, 100, 100 * 330.0 / 487, "./../../School_Logos/Maine_Maritime_Academy.png")
   
-  text_frame(15, 31, 588, 124, ["LINA BERNIER", "Standing out on the court, on ", "the sand, and in the classroom"], 
-             ["Pink Sans 130" for idx in range(3)], [60, 24, 24], colors = ["White" for idx in range(3)], line_spacing = 26, scaling_h = 125)
+  text_frame(15, 26, 588, 124, ["MARÍA PÉREZ", "COLLEGE CAREER RÉSUMÉ"], 
+             ["Pink Sans 130" for idx in range(2)], [60, 30], colors = ["White" for idx in range(2)], line_spacing = 45, scaling_h = 120)
   
-  insert_image(15, 153, 294, 622, "Bernier_poster_scaled.jpg")
+  insert_image(15, 153, 294, 622, "Pérez_poster_1.jpg")
   
   text_1_height = 80; text_1_ypos = 161.5; spacing = 34
-  text_frame(330, text_1_ypos, 270, text_1_height, ["1,376", "career digs*"], ["Pink Sans 130", "Arial Regular"], 
-             [60, 20], colors = ["NJCAA Blue", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
+  text_frame(330, text_1_ypos, 270, text_1_height, ["1,639", "career digs*"], ["Pink Sans 130", "Arial Regular"], 
+             [60, 20], colors = ["Maine_1", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
   
   line_1_ypos = text_1_ypos + text_1_height + 12
   draw_line(330, line_1_ypos, 330 + 30, line_1_ypos, line_type = LINE_SOLID, color = "Black", width = 2)
   
   text_2_ypos = text_1_ypos + text_1_height + spacing
-  text_frame(330, text_2_ypos, 270, text_1_height, ["2x", "CCSA All-Tournament**"], ["Pink Sans 130", "Arial Regular"], 
-             [60, 20], colors = ["NJCAA Blue", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
+  text_frame(330, text_2_ypos, 270, text_1_height + 30, ["3x", "NAC Defensive \nPlayer of the Year**"], ["Pink Sans 130", "Arial Regular"], 
+             [60, 20], colors = ["Maine_1", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
   
-  line_2_ypos = text_2_ypos + text_1_height + 12
+  line_2_ypos = text_2_ypos + text_1_height + 30 + 12
   draw_line(330, line_2_ypos, 330 + 30, line_2_ypos, line_type = LINE_SOLID, color = "Black", width = 2)
   
-  text_3_ypos = text_2_ypos + text_1_height + spacing
-  text_frame(330, text_3_ypos, 270, text_1_height, ["1x", "Top Flight Award***"], ["Pink Sans 130", "Arial Regular"], 
-             [60, 20], colors = ["NJCAA Blue", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
+  text_3_ypos = text_2_ypos + text_1_height + 30 + spacing
+  text_frame(330, text_3_ypos, 270, text_1_height + 30, ["3x", "NAC 1st Team \nAll-Conference***"], ["Pink Sans 130", "Arial Regular"], 
+             [60, 20], colors = ["Maine_1", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
   
-  line_3_ypos = text_3_ypos + text_1_height + 12
+  line_3_ypos = text_3_ypos + text_1_height + 30 + 12
   draw_line(330, line_3_ypos, 330 + 30, line_3_ypos, line_type = LINE_SOLID, color = "Black", width = 2)
   
-  text_4_ypos = text_3_ypos + text_1_height + spacing
-  text_frame(330, text_4_ypos, 270, text_1_height + 30, ["5x", "C-USA Commissioner's Academic Medal^"], ["Pink Sans 130", "Arial Regular"], 
-             [60, 20], colors = ["NJCAA Blue", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
+  text_4_ypos = text_3_ypos + text_1_height + 30 + spacing
+  text_frame(330, text_4_ypos, 270, text_1_height + 30, ["3x", "NAC All-Tournament^"], ["Pink Sans 130", "Arial Regular"], 
+             [60, 20], colors = ["Maine_1", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
   
-  line_4_ypos = text_4_ypos + text_1_height + 30 + 12
+  line_4_ypos = text_4_ypos + text_1_height + 12
   draw_line(330, line_4_ypos, 330 + 30, line_4_ypos, line_type = LINE_SOLID, color = "Black", width = 2)
   
-  text_5_ypos = text_4_ypos + text_1_height + 30 + spacing
-  text_frame(330, text_5_ypos, 270, text_1_height + 30, ["1x", "Google Cloud Academic \nAll-District First Team^^"], ["Pink Sans 130", "Arial Regular"], 
-             [60, 20], colors = ["NJCAA Blue", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
+  text_5_ypos = text_4_ypos + text_1_height + spacing
+  text_frame(330, text_5_ypos, 270, text_1_height, ["1x", "Female Leader of the Year^^"], ["Pink Sans 130", "Arial Regular"], 
+             [60, 20], colors = ["Maine_1", "Black"], line_spacing = 30, alignment = ALIGN_LEFT)
              
-  footer = "*Only 2 full seasons as libero + 1 season as OH **2017 and 2019 ***Awarded to Bernier and beach v-ball partner Erika Zembyla in 2019 for winning\n at least 75% of 15 or more matches on court #4 ^2016-2020, Awarded to Conference-USA athletes with GPA of 3.75 or better ^^2018"
-  text_frame(15, 775, 600, 25, [footer], ["Arial Regular"], [8], colors = ["Black"], line_spacing = 9, alignment = ALIGN_LEFT)
+  footer = "*Maine Maritime Academy all-time leader **2016 - 2018 ***2017 - 2019 ^2016, 2017, 2019  ^^May 2020"
+  text_frame(15, 780, 600, 20, [footer], ["Arial Regular"], [8], colors = ["Black"], line_spacing = 9, alignment = ALIGN_LEFT)
