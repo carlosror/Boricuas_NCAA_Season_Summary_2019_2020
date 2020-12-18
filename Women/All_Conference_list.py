@@ -86,7 +86,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
         break
           
     header = createRect(36, offset - header_height, 540, header_height)
-    setFillColor("Map Gray", header); setLineColor("None", header)
+    setFillColor("Map Gray", header); setLineColor("NJCAA Blue", header)
     
     player_name_frame_width = 90; player_name_frame_xpos = 36 + 4
     player_name_frame = createText(player_name_frame_xpos, offset + 5, player_name_frame_width, num_rows * row_height)

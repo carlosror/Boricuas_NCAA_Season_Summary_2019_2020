@@ -28,6 +28,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
 
   defineColor("NJCAA Blue", 217, 168, 55, 94)
   defineColor("NJCAA Gray", 0, 0, 0, 40)
+  defineColor("Beach VB", 154, 50, 0, 0)
   
   top_rect = createRect(0, 0, 612, 36)
   setFillColor("NJCAA Blue", top_rect); setLineColor("NJCAA Blue", top_rect)
