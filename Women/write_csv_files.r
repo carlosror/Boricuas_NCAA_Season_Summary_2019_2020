@@ -13,7 +13,7 @@ bvb <- read.csv("NCAA_NJCAA_NAIA_beach_volleyball_players_2019_2020.csv", encodi
 # First, concatenate all the datasets except the beach volleyball one using rbind()
 # Second, subset the beach volleyball dataset to include only those that play beach vb and *not* floor vb
 # Then concatenate the two resulting datasets from steps 1 and 2
-all_players_no_bvb <- rbind(ncaa1, ncaa2, ncaa3, njcaa1, njcaa2, naia)
+all_players_no_bvb <- rbind(naia, ncaa1, ncaa2, ncaa3, njcaa1, njcaa2)
 players_bvb_only <- bvb[!(bvb$Player %in% all_players_no_bvb$Player),]
 
 all_players <- rbind(all_players_no_bvb, players_bvb_only)

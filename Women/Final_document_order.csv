@@ -1,0 +1,98 @@
+Section,Filename,Python Script,R Script,Num_pages
+Cover,cover.sla,cover.py,,1
+Table of contents,toc.sla,toc.py,,1
+By the numbers,By_the_numbers.sla,By_the_numbers.py,,1
+Map or arcs,Map_of_arcs.sla,Map_of_arcs.py,,1
+NAIA Cover,NAIA_cover.sla,NAIA_cover.py,,1
+Meet the NAIA players,NAIA_mugshots.sla,NAIA_mugshots_3x4.py,,4
+NAIA Action Shots,NAIA_action_shots.sla,NAIA_action_shots.py,,3
+Article: FMU Eight,,,,3
+NCAA DI Cover,NCAA_DI_cover.sla,NCAA_DI_cover.py,,1
+Meet the NCAA DI players,NCAA_DI_mugshots.sla,NCAA_DI_mugshots_3x4.py,,5
+NCAA DI Action Shots,NCAA_DI_action_shots.sla,NCAA_DI_action_shots.py,,6
+Article: Feliciano & Vázquez,,,,3
+Article: Lina Bernier,,,,3
+Article: Mariana Trujillo,,,,3
+NCAA DII Cover,NCAA_DII_cover.sla,NCAA_DII_cover.py,,1
+Meet the NCAA DII players,NCAA_DII_mugshots.sla,NCAA_DII_mugshots_3x4.py,,5
+NCAA DII Action Shots,NCAA_DII_action_shots.sla,NCAA_DII_action_shots.py,,6
+Article: Eckert & Serra,,,,3
+NCAA DIII Cover,NCAA_DIII_cover.sla,NCAA_DIII_cover.py,,1
+Meet the NCAA DIII players,NCAA_DIII_mugshots.sla,NCAA_DIII_mugshots_3x4.py,,5
+NCAA DIII Action Shots,NCAA_DIII_action_shots.sla,NCAA_DIII_action_shots.py,,6
+Article: Vital & Figueroa,,,,3
+Article: María Pérez,,,,3
+,,,,3
+NJCAA DI Cover,NJCAA_DI_cover.sla,NJCAA_DI_cover.py,,1
+Meet the NJCAA DI players,NJCAA_DI_mugshots.sla,NJCAA_DI_mugshots_3x4.py,,4
+NJCAA DI Action Shots,NJCAA_DI_action_shots.sla,NJCAA_DI_action_shots.py,,2
+NJCAA DII Cover,NJCAA_DII_cover.sla,NJCAA_DII_cover.py,,1
+Meet the NJCAA DII players,NJCAA_DII_mugshots.sla,NJCAA_DII_mugshots_3x4.py,,3
+NJCAA DII Action Shots,NJCAA_DII_action_shots.sla,NJCAA_DII_action_shots.py,,2
+NJCAA Transfers,,,,3
+Beach Volleyball Cover,,,,1
+Meet the beach volleyball players,,,,3
+Beach volleyball Action Shots,,,,2
+All players list,All_Players.sla,,,8
+LAI cover,,,,1
+PUC Cover,,,,1
+PUC action,,,,1
+RUM Cover,,,,1
+RUM action shots,,,,3
+IUPI Cover,,,,1
+IUPI Action,,,,2
+UAGM Cover,,,,1
+UAGM Action,,,,1
+Sagrado Cover,,,,1
+Sagrado Action,,,,1
+Inter Cover,,,,1
+Inter Action,,,,1
+Where they play - Wordcloud,,,,1
+Where they play - Map,,,,1
+Where they play - Barplot,,,,1
+Where they are from - Wordcloud,,,,1
+Where they are from - Map,,,,1
+Where they are from - Municipality,,,,15
+Where they are from - High School,,,,16
+All Conference - Cover,,,,1
+All Conference,All_Conference.sla,All_Conferemce.py,,10
+All Conference - List,,,,2
+All Academic - Cover,,,,1
+All Academic - Photos,,,,8
+All Academic - List,,,,3
+All Academic - Barplot,,,,1
+Statitical leaders cover,,,,1
+Top 50,Top50.sla,Top50.py,,14
+Top 50 list,Top50_list.sla,Top50_list.py,,2
+Conference leaders,Conf_leaders.sla,Conf_leaders.py,,18
+Conference leaders - List,,,,3
+Clubs - Cover,,,,1
+Club - 60 aces,,,,1
+Club - 60 blocks,,,,1
+Club - 200 kills 200 assists 200 digs,,,,1
+Club - 300 kills 300 digs,,,,1
+Club - 400 kills,,,,1
+Club - 500 digs,,,,1
+Club - 800 assists 300 digs,,,,1
+Club - 900 assists,,,,1
+National tournaments - Cover,,,,1
+National tournaments,National_tournaments.sla,National_tournaments.py,,10
+National tournaments - List,,,,2
+Outstanding matches - Cover,,,,1
+Outstanding matches,Outstanding_matches.sla,Outstanding_matches.py,,4
+Outstanding matches - List,,,,1
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,246
