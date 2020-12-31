@@ -52,21 +52,23 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   text_frame(576, 6.7, 36, 36, ["2019", "-", "2020"], ["OLD SPORT 02 ATHLETIC NCV Regular" for idx in range(3)], [11,11, 11], 
              colors = ["White" for idx in range(3)], line_spacing = 7)
   
-  wordcloud1_height = 540 * (990 / 1656.0)
-  insert_image(36, 66, 540, wordcloud1_height, "wordcloud_hometowns_colors2_scaled.png")
-  insert_image(36, 66 + wordcloud1_height + 10, 540, 540 * (1378 / 2274.0), "wordcloud_highschools_colors3_scaled.png")
-  space_rect = createRect(36, 66 + wordcloud1_height - 1, 540, 12)
+  wordcloud1_height = 540 * (1642 / 2510.0)
+  offset = 80
+  insert_image(36, offset, 540, wordcloud1_height, "wordcloud_hometowns_colors3_scaled.png")
+  wordcloud2_height = 540 * (1402 / 2818.0)
+  insert_image(36, offset + wordcloud1_height + 10, 540, wordcloud2_height, "wordcloud_highschools_colors7_scaled.png")
+  space_rect = createRect(36, offset + wordcloud1_height - 1, 540, 12)
   setFillColor("White", space_rect); setLineColor("None", space_rect)
   
-  draw_line(36, 66 + wordcloud1_height + 5, 576, 66 + wordcloud1_height + 5, line_type = LINE_SOLID, width = 0.5, color = "Cyan")
+  draw_line(36, offset + wordcloud1_height + 5, 576, offset + wordcloud1_height + 5, line_type = LINE_SOLID, width = 0.5, color = "Cyan")
   
-  wordcloud_label_1_ypos = 66 + wordcloud1_height + 5 - 40
+  wordcloud_label_1_ypos = offset + wordcloud1_height + 5 - 40
   wordcloud_label_1 = createRect(36, wordcloud_label_1_ypos, 75, 40)
   setFillColor("Cyan", wordcloud_label_1); setLineColor("None", wordcloud_label_1)
   
   text_frame(36, wordcloud_label_1_ypos + 5, 75, 50, ["58", "municipalities"], ["Pink Sans 130" for idx in range(2)], [24, 12], colors = ["White" for idx in range(2)], line_spacing = 13)
   
-  wordcloud_label_2_ypos = 66 + wordcloud1_height + 5
+  wordcloud_label_2_ypos = offset + wordcloud1_height + 5
   wordcloud_label_2 = createRect(36 + 540 - 75, wordcloud_label_2_ypos, 75, 40)
   setFillColor("Cyan", wordcloud_label_2); setLineColor("None", wordcloud_label_2)
   

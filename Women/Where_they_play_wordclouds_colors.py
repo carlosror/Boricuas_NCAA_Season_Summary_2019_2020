@@ -52,9 +52,11 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   text_frame(576, 6.7, 36, 36, ["2019", "-", "2020"], ["OLD SPORT 02 ATHLETIC NCV Regular" for idx in range(3)], [11,11, 11], 
              colors = ["White" for idx in range(3)], line_spacing = 7)
   
-  insert_image(41, 41, 529, 710, "wordcloud_institutions_colors2_scaled.png")
+  image_width = 720 * (1558 / 2128.0)
+  xpos_image = (612 - image_width) / 2.0
+  insert_image(xpos_image, 36, image_width, 720, "wordcloud_institutions_colors4_scaled.png")
   
-  wordcloud_label = createRect(65, 41, 65, 50)
+  wordcloud_label = createRect(65, 36, 65, 50)
   setFillColor("Cyan", wordcloud_label); setLineColor("Cyan", wordcloud_label)
   
-  text_frame(65, 46, 65, 50, ["157", "institutions"], ["Pink Sans 130" for idx in range(2)], [30, 15], colors = ["White" for idx in range(2)], line_spacing = 17)
+  text_frame(65, 41, 65, 50, ["158", "institutions"], ["Pink Sans 130" for idx in range(2)], [30, 15], colors = ["White" for idx in range(2)], line_spacing = 17)

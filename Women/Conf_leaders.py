@@ -41,7 +41,8 @@ banner_colors_dict = {"Florida Memorial University": [0, 0, 0, 0], "University o
                       "Florida International University": [0,0,0,0], "North Carolina A&T": [0,0,0,0], "Tennessee State University": [0,0,0,0], "Coppin State University": [0,0,0,0], 
                       "Quinnipiac University": [0,0,0,0], "University of Evansville": [0,0,0,0], "Manhattan College": [0,0,0,0], "Southern Illinois University": [0,0,0,0], 
                       "Goldey-Beacom College": [0,0,0,0], "Maine Maritime Academy": [0,0,0,0], "Dickinson College": [0,0,0,0], "University of Saint Joseph's": [0,0,0,0], 
-                      "Pratt Institute": [0,0,0,0], "Chowan University": [0,0,0,0], "Rutgers University - Newark": [0,0,0,0], "Clark University": [0,0,0,0], "St. Thomas University": [0,0,0,0]}
+                      "Pratt Institute": [0,0,0,0], "Chowan University": [0,0,0,0], "Rutgers University - Newark": [0,0,0,0], "Clark University": [0,0,0,0], "St. Thomas University": [0,0,0,0], 
+                      "The College of Saint Rose": [0, 0, 0, 255]}
 
 banner_text_colors_dict = {"Florida_Memorial_University": [int(0.878*255), int(0.749*255), 0, 0], "University_of_Saint_Mary": [int(0.882*255), int(0.722*255), int(0.212*255), int(0.659*255)], 
                            "Xavier_University_of_Louisiana": [0, 0, 0, 0], "College_of_Coastal_Georgia": [int(0.808*255), int(0.741*255), int(0.012*255), int(0.0235*255)],
@@ -70,7 +71,7 @@ banner_text_colors_dict = {"Florida_Memorial_University": [int(0.878*255), int(0
                            "Dickinson_College": [int(0.004*255), int(0.941*255), int(0.843*255), int(0.012*255)], "University_of_Saint_Joseph's": [int(0.941*255), int(0.792*255), int(0.102*255), int(0.396*255)], 
                            "Pratt_Institute": [int(0.475*255), int(0.443*255), int(0.384*255), int(0.89*255)], "Chowan_University": [int(0.835*255), int(0.498*255), int(0.016*255), int(0.028*255)], 
                            "Rutgers_University_-_Newark": [int(0.008*255), int(0.945*255), int(0.949*255), int(0.067*255)], "Clark_University": [int(0.0*255), int(0.863*255), int(0.835*255), int(0.0*255)], 
-                           "St._Thomas_University": [int(0.941*255), int(0.792*255), int(0.102*255), int(0.396*255)]}
+                           "St._Thomas_University": [int(0.941*255), int(0.792*255), int(0.102*255), int(0.396*255)], "The_College_of_Saint_Rose": [0,0,0,0]}
 players_list = []
 players_names_list = []
 with open("Conference_leaders.csv") as f:
