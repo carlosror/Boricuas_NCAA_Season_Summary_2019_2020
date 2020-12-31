@@ -47,7 +47,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   draw_line(340, 36, 340, 756) # vertical line
   
   # Number of players
-  text_frame(0, 51, 340, 87, ["274", "student athletes"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
+  text_frame(0, 51, 340, 87, ["275", "student athletes"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
   draw_line(0, 140, 340, 140)
   
   # Puerto Rico map
@@ -82,7 +82,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   
   # Top 10
   insert_image(426, 420, 100, 73, "./top_10_4.png")
-  text_frame(340, 501, 272, 75, ["74", "conference leaders"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
+  text_frame(340, 501, 272, 75, ["75", "conference leaders"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
   draw_line(340, 568, 612, 568)
   
   # Tournament logos

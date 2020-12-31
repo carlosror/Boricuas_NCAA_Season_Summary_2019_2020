@@ -54,8 +54,8 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   # First row
   text_width_1 = 116; text_width_2 = 92; text_width_3 = 98; text_width_4 = 62; text_height = 87
   blank_space = (540 - (text_width_1 + text_width_2 + text_width_3 + text_width_4)) / 5.0
-  text_frame(36 + blank_space, 482, text_width_1, text_height, ["274", "student athletes"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
-  text_frame(36 + 2 * blank_space + text_width_1, 482, text_width_2, text_height, ["157", "institutions"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
+  text_frame(36 + blank_space, 482, text_width_1, text_height, ["275", "student athletes"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
+  text_frame(36 + 2 * blank_space + text_width_1, 482, text_width_2, text_height, ["158", "institutions"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
   text_frame(36 + 3 * blank_space + text_width_1 + text_width_2, 482, text_width_3, text_height, ["58", "municipalities"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
   text_frame(36 + 4 * blank_space + text_width_1 + text_width_2 + text_width_3, 482, text_width_4, text_height, ["33", "states"], ["Pink Sans 130", "Pink Sans 130"], [70, 20])
   
@@ -82,8 +82,8 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   # Second row numbers
   text_width = frame_width; text_height = 66
   text_frame(36, 670, text_width, text_height, ["42", "players"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
-  text_frame(36 + text_width, 670, text_width, text_height, ["60", "players"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
-  text_frame(36 + 2 * text_width, 670, text_width, text_height, ["59", "players"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
+  text_frame(36 + text_width, 670, text_width, text_height, ["60", "players"], ["Pink Sans 130", "Pink Sans 130"], [50, 20]) #57 indoors + 3 BVB
+  text_frame(36 + 2 * text_width, 670, text_width, text_height, ["60", "players"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
   text_frame(36 + 3 * text_width, 670, text_width, text_height, ["35", "players"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
   text_frame(36 + 4 * text_width, 670, text_width, text_height, ["78", "players"], ["Pink Sans 130", "Pink Sans 130"], [50, 20])
   

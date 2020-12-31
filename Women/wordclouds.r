@@ -1,6 +1,10 @@
 library(wordcloud2)
 library(RColorBrewer)
 # You have to play with it a bit
+# *** Need to make sure the one with the highest frequency shows. If you make 'size' too large it won't ***
+# For each of the "wordcloud" statements, maximize the Zoom window after you run it, 
+# then clip it with Snipping Tool (IrfanView messes up the PNG's). Then fine tune the clipping 
+# and rotate if necessary in GIMP.
 source("write_csv_files.r")
 df <- as.data.frame(table(all_players$Hometown))
 colnames(df) <- c("hometown", "freq")

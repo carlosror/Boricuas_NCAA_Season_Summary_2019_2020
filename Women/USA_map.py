@@ -46,7 +46,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   
   map_height = 252
   usa_map = createImage(36, 54, 540, map_height)
-  loadImage("./../Maps/usa_map9.png", usa_map); setScaleImageToFrame(1, 1, usa_map)
+  loadImage("./../Maps/usa_map10.png", usa_map); setScaleImageToFrame(1, 1, usa_map)
   setLineColor("NJCAA Blue", usa_map)
   
   states_list_size = len(states_list)

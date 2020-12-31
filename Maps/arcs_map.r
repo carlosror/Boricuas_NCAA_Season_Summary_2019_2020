@@ -5,6 +5,7 @@ library(ggplot2)
 library(geosphere)
 library(ggmap)
 library(extrafont)
+library(RColorBrewer)
 register_google(key = "AIzaSyDV235gPhQgTX0_uHbxgCB5JqbdQkoj_L8")
 
 # https://www.r-spatial.org/r/2018/10/25/ggplot2-sf.html

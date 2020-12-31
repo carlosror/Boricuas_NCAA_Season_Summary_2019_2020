@@ -58,7 +58,7 @@ theme_map <- function(...) {
 
 p <- ggplot(usa_data_join) + geom_sf(color = "white", fill = "light gray") + 
             geom_point(aes(X, Y, size=PlayerCount), data = centroids_join, pch=21, color = "white", fill='cornflowerblue', alpha = 0.5, show.legend = FALSE) +
-            scale_size(range = c(5, 30)) +
+            scale_size(range = c(6, 42)) +
             geom_text(aes(X, Y, label = NAME), data = centroids, size = 4.0, color = 'dodgerblue4') +
             geom_rect(xmin = -80, xmax = -66.8, ymin = 37, ymax = 47.5, fill = NA, colour = "dodgerblue4", size = 0.5) + 
             theme_map() + ggtitle(label = "Number of players from Puerto Rico by state", subtitle = "Academic year 2019-2020") 
@@ -66,7 +66,7 @@ p <- ggplot(usa_data_join) + geom_sf(color = "white", fill = "light gray") +
 
 q <- ggplot(usa_data_join) + geom_sf(color = "white", fill = "light gray") + 
             geom_point(aes(X, Y, size=PlayerCount), data = centroids_join, pch=21, color = "white", fill='cornflowerblue', alpha = 0.5, show.legend = FALSE) +
-            scale_size(range = c(5, 30)) +
+            scale_size(range = c(6, 42)) +
             geom_text(aes(X, Y, label = NAME), data = centroids, size = 3.0, color = 'dodgerblue4') + 
             geom_rect(xmin = -80, xmax = -66.8, ymin = 37, ymax = 47.5, fill = NA, colour = "dodgerblue4", size = 0.5) +
             coord_sf(xlim = c(-80, -66.8), ylim = c(37, 47.5), expand = FALSE) +
@@ -81,4 +81,4 @@ q <- ggplot(usa_data_join) + geom_sf(color = "white", fill = "light gray") +
 # https://www.r-spatial.org/r/2018/10/25/ggplot2-sf-3.html
 # Using cowplot
 print(plot_grid(p, q, nrow = 1, rel_widths = c(2.35, 1)))
-# ggsave(filename = "usa_map9.png", , width = 16.05, height = 7.5)
+# ggsave(filename = "usa_map10.png", , width = 16.05, height = 7.5)

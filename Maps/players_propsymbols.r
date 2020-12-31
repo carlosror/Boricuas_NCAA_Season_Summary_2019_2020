@@ -76,10 +76,13 @@ theme_map <- function(...) {
 
 p <- ggplot(pr_data_join) + geom_sf(color = "white", fill = "light gray") + 
             geom_point(aes(X, Y, size=PlayerCount), data = centroids_join, pch=21, color = "white", fill='cornflowerblue', alpha = 0.5) + 
-            scale_size(range = c(5, 30)) +
+            scale_size(range = c(8, 56)) +
             coord_sf(xlim = c(-67.2, -65.6625)) +
             geom_text(aes(X, Y, label = NAME), data = centroids, size = 4.0, color = 'dodgerblue4') +
             theme_map() +
             ggtitle(label = "Number of players from Puerto Rico by municipality", subtitle = "Academic year 2019-2020")
 print(p)
-# ggsave(filename = "pr_map3.png", plot = p, width = 16.05, height = 7.5)
+# I am leaving the ggsave() line commenetd out due to the Mayagüez issue above
+# After manually fixing it by running the lines in Rstudio terminal, as well as the plot lines again, you can run the ggsave()
+# line in the terminal as well
+ggsave(filename = "pr_map4.png", plot = p, width = 16.05, height = 7.5)

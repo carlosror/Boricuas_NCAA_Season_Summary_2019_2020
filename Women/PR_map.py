@@ -47,7 +47,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   
   map_height = 252
   pr_map = createImage(36, 54, 540, map_height)
-  loadImage("./../Maps/pr_map3.png", pr_map); setScaleImageToFrame(1, 1, pr_map)
+  loadImage("./../Maps/pr_map4.png", pr_map); setScaleImageToFrame(1, 1, pr_map)
   setLineColor("NJCAA Blue", pr_map)
   
   muni_list_size = len(muni_list)
