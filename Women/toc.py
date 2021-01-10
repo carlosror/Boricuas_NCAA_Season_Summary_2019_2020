@@ -58,7 +58,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   FMU_page = sections_dict["Article: FMU Eight"]
   text_frame(xpos_offset, ypos_offset + 1 * frame_div_height, frame_width, frame_header_height, [str(FMU_page), "The FMU Eight"], 
              ["RACE1 Brannt NCV Regular", "Asimov Print C"], [24, 15], 2 *["White"], alignment = ALIGN_RIGHT, line_spacing = 15)
-  text_frame(xpos_offset, ypos_offset + 1 * frame_div_height + 1 * (frame_header_height), frame_width, frame_comment_height, ["In South Florida, a Puerto Rican octet helps take FMU volleyball to rarefied heigths"], 
+  text_frame(xpos_offset, ypos_offset + 1 * frame_div_height + 1 * (frame_header_height), frame_width, frame_comment_height, ["In South Florida, a Puerto Rican octet helps FMU volleyball reach rarefied heigths"], 
              ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_RIGHT, line_spacing = 11)
   text_frame(xpos_offset, ypos_offset + 1 * frame_div_height + 1 * (frame_header_height) + 1 * (frame_comment_height) + sep, frame_width, frame_div_height, ["NCAA DIVISION I"], ["Calibri Bold"], [15], ["Maine_MA_Blue"], alignment = ALIGN_RIGHT)
   Evansville_page = sections_dict["Article: Feliciano & Vázquez"]

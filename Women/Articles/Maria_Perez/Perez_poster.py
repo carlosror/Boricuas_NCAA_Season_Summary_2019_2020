@@ -53,7 +53,16 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   text_frame(15, 26, 588, 124, ["MARÍA PÉREZ", "COLLEGE CAREER RÉSUMÉ"], 
              ["Pink Sans 130" for idx in range(2)], [60, 30], colors = ["White" for idx in range(2)], line_spacing = 45, scaling_h = 120)
   
-  insert_image(15, 153, 294, 622, "Pérez_poster_1.jpg")
+  poster_x = 15; poster_y = 153; poster_width = 294; poster_height = 294 * 1883.0 / 890.0
+  insert_image(poster_x, poster_y, poster_width, poster_height, "Pérez_poster_1.jpg")
+  
+  photo_credit = "Photo: Tony Llerena"
+  photo_credit_length = len(photo_credit)
+  photo_credit_width = 95; photo_credit_height = 15
+  photo_credit_banner = createRect(poster_x + poster_width - photo_credit_width, poster_y + poster_height - photo_credit_height, photo_credit_width, photo_credit_height)
+  setFillColor("Maine_1", photo_credit_banner); setLineColor("None", photo_credit_banner); setFillTransparency(0.70, photo_credit_banner)
+  
+  text_frame(poster_x + poster_width - photo_credit_width + 3, poster_y + poster_height - photo_credit_height + 4, photo_credit_width, photo_credit_height, [photo_credit], ["Asimov Print C"], [10], colors = ["White"], alignment = ALIGN_LEFT)
   
   text_1_height = 80; text_1_ypos = 161.5; spacing = 34
   text_frame(330, text_1_ypos, 270, text_1_height, ["1,639", "career digs*"], ["Pink Sans 130", "Arial Regular"], 

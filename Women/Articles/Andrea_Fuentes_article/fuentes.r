@@ -16,14 +16,14 @@ theme_plot <- function(...) {
     axis.text.y = element_text(size = 25), 
     panel.grid.major.x = element_blank(),
     # panel.grid.major.y = element_blank(),
-    panel.grid.major.y = element_line(colour = "gray75"),
+    panel.grid.major.y = element_line(colour = "gray55"),
     panel.grid.minor = element_blank(), 
     # text = element_text(size=16), 
     plot.title = element_text(hjust = 0.5, vjust = 10, size = 35), 
     # plot.subtitle = element_text(hjust = -0.12, vjust = 10, , color = "orange"),
     plot.margin = unit(c(2,1,1,1), "cm"),
-    panel.background = element_rect(fill = '#fed500', color = "#fed500"),
-    plot.background = element_rect(fill = "#fed500", color = "#fed500"),
+    panel.background = element_rect(fill = '#F1B82D', color = "#F1B82D"),
+    plot.background = element_rect(fill = "#F1B82D", color = "#F1B82D"),
     # plot.background = element_rect(fill = 'gray95'),
     panel.border = element_blank(),
     legend.position = "none",
@@ -49,3 +49,5 @@ p_missouri_hit_pcntg <- ggplot(Fuentes_stats_df) + geom_bar(aes(x=year, y = team
      # ylab("Single-match high")
 print(p_missouri_hit_pcntg)
 
+ggsave(plot = p_assists_per_set, filename = "p_assists_per_set.png", width = 9.5, height = 9.5 * 722 / 959, device = "png", units = "in")
+ggsave(plot = p_missouri_hit_pcntg, filename = "p_missouri_hit_pcntg.png", width = 9.5, height = 9.5 * 722 / 959, device = "png", units = "in")

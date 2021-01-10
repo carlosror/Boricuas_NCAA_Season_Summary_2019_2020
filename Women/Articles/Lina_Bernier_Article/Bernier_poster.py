@@ -51,7 +51,16 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   text_frame(15, 31, 588, 124, ["LINA BERNIER", "Standing out on the court, on ", "the sand, and in the classroom"], 
              ["Pink Sans 130" for idx in range(3)], [60, 24, 24], colors = ["White" for idx in range(3)], line_spacing = 26, scaling_h = 125)
   
-  insert_image(15, 153, 294, 622, "Bernier_poster_scaled.jpg")
+  poster_x = 15; poster_y = 153; poster_width = 294; poster_height = 294 * 1874.0 / 888.0
+  insert_image(15, 153, poster_width, poster_height, "Bernier_poster_scaled.jpg")
+  
+  photo_credit = "Photo: FIU Athletics"
+  photo_credit_length = len(photo_credit)
+  photo_credit_width = 95; photo_credit_height = 15
+  photo_credit_banner = createRect(poster_x, poster_y, photo_credit_width, photo_credit_height)
+  setFillColor("NJCAA Blue", photo_credit_banner); setLineColor("None", photo_credit_banner); setFillTransparency(0.70, photo_credit_banner)
+  
+  text_frame(poster_x + 3, poster_y + 4, photo_credit_width, photo_credit_height, [photo_credit], ["Asimov Print C"], [10], colors = ["White"], alignment = ALIGN_LEFT)
   
   text_1_height = 80; text_1_ypos = 161.5; spacing = 34
   text_frame(330, text_1_ypos, 270, text_1_height, ["1,376", "career digs*"], ["Pink Sans 130", "Arial Regular"], 

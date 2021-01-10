@@ -48,12 +48,12 @@ theme_plot <- function(...) {
 line_df <- data.frame(x1 = 11, x2 = 10.8, y1 = 1.2, y2 = 2.8)
 p <- ggplot(dig_rankings_500) + geom_bar(aes(x=Height), fill="steelblue4", width=0.5, position = position_dodge(width=0.7)) + 
      scale_y_continuous(breaks = c(1, 10, 20), limits = c(0, 22)) + 
-     xlab("Height") +  ylab("Number of players with 500+ digs") + 
+     xlab("Height") +  ylab("Number of players with 500+ digs, by height") + 
      annotation_raster(raster = bernier_photo, xmin = 9.5, xmax = 11.5, ymin = 3, ymax = 23) + 
      # annotation_raster(raster = bernier, xmin = 9, xmax = 9.8, ymin = 24, ymax = 29) +
      coord_cartesian(clip = "off") + 
      theme_plot() + 
-     ggtitle(label = "Standing tall", subtitle = "At 5-11, FIU's Lina Bernier was the tallest player with 500+ digs in NCAA Division I in 2019") + 
+     ggtitle(label = "Standing Tall", subtitle = "At 5-11, FIU's Lina Bernier was the tallest player with 500+ digs in NCAA Division I in 2019") + 
      geom_label(x = 8.2, y = 19, label = "Lina Bernier", size = 7, family = "Playball", color = "Black", label.size = NA) + 
      geom_label(x = 9.2, y = 16.3, label = "530 digs\n5.15 digs/set", size = 5, color = "Black", label.size = NA, hjust = "right") +
      geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), colour = "Black", data = line_df, arrow = arrow(length = unit(0.02, "npc"), type = "closed"))
