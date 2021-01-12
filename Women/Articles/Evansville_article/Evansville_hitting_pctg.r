@@ -7,10 +7,10 @@ library(png)
 Vazquez <- "Vázquez"
 Encoding(Vazquez) <- "UTF-8"
 
-evansville <- read.csv("Evansville_article/Vazquez_and_Feliciano.csv", nrows = 30)
+evansville <- read.csv("Vazquez_and_Feliciano.csv", nrows = 30)
 evansville_logo <- readPNG("C:/Users/cesargb/Documents/Boricuas_NCAA/Season_Summary_2019_2020/Women/School_Logos/University_of_Evansville.png")
-feliciano <- readPNG("C:/Users/cesargb/Documents/Boricuas_NCAA/Season_Summary_2019_2020/Women/Evansville_article/Melanie_Feliciano.png")
-vazquez <- readPNG("C:/Users/cesargb/Documents/Boricuas_NCAA/Season_Summary_2019_2020/Women/Evansville_article/Alondra_Vazquez.png")
+feliciano <- readPNG("Melanie_Feliciano.png")
+vazquez <- readPNG("Alondra_Vazquez.png")
 
 theme_plot <- function(...) {
   theme_minimal() +
@@ -27,8 +27,8 @@ theme_plot <- function(...) {
     plot.title = element_text(hjust = -0.065, vjust = 12.5, face = "bold", color = "orange"), 
     plot.subtitle = element_text(hjust = -0.12, vjust = 10, , color = "orange"),
     plot.margin = unit(c(2,1,1,1), "cm"),
-    panel.background = element_rect(fill = 'gray95', color = "gray95"),
-    plot.background = element_rect(fill = 'gray95'),
+    panel.background = element_rect(fill = 'white', color = "white"),
+    plot.background = element_rect(fill = 'white'),
     panel.border = element_blank()
   )
 }
@@ -40,7 +40,7 @@ p <- ggplot(data=evansville, aes(x=c(1:30), y=Combined_Hitting_Pctg)) + geom_lin
      scale_y_continuous(labels = scales::percent_format(accuracy = 1), limits = c(0.0, 0.5), breaks = c(0.0, 0.21, 0.45)) + 
      # geom_label(label = paste("It pays to be efficient\nFeliciano's and", Vazquez, "' combined hitting % and match outcomes"), x = 8, y = 0.45, size = 5) 
      ggtitle(label = "It pays to be efficient", subtitle = paste("Feliciano's and ", Vazquez, "' combined hitting % and match outcomes", sep = "")) +
-     geom_hline(yintercept = 0.21, linetype = "dashed", size = 1.5, color = "gray75") + geom_hline(yintercept = 0.0, color = "gray 75") + geom_hline(yintercept = 0.45, color = "gray 75") + 
+     geom_hline(yintercept = 0.21, linetype = "dotted", size = 1.0, color = "gray75") + geom_hline(yintercept = 0.0, color = "gray 75") + geom_hline(yintercept = 0.45, color = "gray 75") + 
      geom_text(x=10, y=0.48, label="9-3", size = 14, family = "OLD SPORT 02 ATHLETIC NCV", color = "orange") + 
      annotate(geom = "text", x=10, y=0.41, label = "Aces record\nwhen duo hits\n21% or higher", color = "orange") + 
      geom_text(x=16, y=0.48, label="23.1%", size = 14, family = "OLD SPORT 02 ATHLETIC NCV", color = "orange") + 
@@ -54,3 +54,4 @@ p <- ggplot(data=evansville, aes(x=c(1:30), y=Combined_Hitting_Pctg)) + geom_lin
      coord_cartesian(clip = "off") 
           
 print(p)
+ggsave(plot = p, filename = "Feliciano_Vazquez_eff.png", width = 12.5, height = 12.5 * 599 / 1133, device = "png", units = "in")
