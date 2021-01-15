@@ -46,7 +46,7 @@ theme_plot <- function(...) {
 # https://stackoverflow.com/questions/11366964/is-there-a-way-to-change-the-spacing-between-legend-items-in-ggplot2
 # https://stackoverflow.com/questions/16356052/control-ggplot2-legend-look-without-affecting-the-plot
 line_df <- data.frame(x1 = 11, x2 = 10.8, y1 = 1.2, y2 = 2.8)
-p <- ggplot(dig_rankings_500) + geom_bar(aes(x=Height), fill="steelblue4", width=0.5, position = position_dodge(width=0.7)) + 
+p <- ggplot(dig_rankings_500) + geom_bar(aes(x=Height), fill="#002D62", width=0.5, position = position_dodge(width=0.7)) + 
      scale_y_continuous(breaks = c(1, 10, 20), limits = c(0, 22)) + 
      xlab("Height") +  ylab("Number of players with 500+ digs, by height") + 
      annotation_raster(raster = bernier_photo, xmin = 9.5, xmax = 11.5, ymin = 3, ymax = 23) + 

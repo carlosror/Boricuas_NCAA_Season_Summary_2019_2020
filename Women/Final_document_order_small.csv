@@ -1,0 +1,21 @@
+Section,Filename,Python Script,R Script,Num_pages
+Cover,cover.sla,cover.py,,1
+Table of contents,toc.sla,toc.py,,1
+By the numbers,By_the_numbers.sla,By_the_numbers.py,,1
+Map or arcs,Map_of_arcs.sla,Map_of_arcs.py,arcs_map.r,1
+NAIA Cover,NAIA_cover.sla,NAIA_cover.py,,1
+Article: Feliciano & Vázquez,./Articles/Evansville_article/Evansville_article.sla,,,4
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0
+,,,,0

@@ -43,5 +43,5 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   setFillColor("White", div_rect); setLineColor("None", div_rect)
   text_frame(612 - div_width + 4, 5, div_width, 35, ["Clubs"], ["Asimov Print C"], [24], ["St Francis 2"], alignment = ALIGN_RIGHT)
   # insert_image(30, 56, 70, 70 * (1179.0 / 1200), "./Division_logos/NCAA_DI_logo_original.png")
-  text_frame(365, 650, 240, 70, ["Kizzy Rodríguez", "St. Francis College", "New York", "Photo: St Francis Brooklyn College Athletics"], ["Asimov Print C" for idx in range(4)], 4*[12], 
+  text_frame(365, 620, 240, 85, ["Kizzy Rodríguez", "St. Francis College", "New York", "Photo: St Francis Brooklyn College\nAthletics "], ["Asimov Print C" for idx in range(4)], 4*[12], 
              ["White" for idx in range(4)], alignment = ALIGN_RIGHT, line_spacing = 15)

@@ -61,31 +61,36 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   text_frame(xpos_offset, ypos_offset + 1 * frame_div_height + 1 * (frame_header_height), frame_width, frame_comment_height, ["In South Florida, a Puerto Rican octet helps FMU volleyball reach rarefied heigths"], 
              ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_RIGHT, line_spacing = 11)
   text_frame(xpos_offset, ypos_offset + 1 * frame_div_height + 1 * (frame_header_height) + 1 * (frame_comment_height) + sep, frame_width, frame_div_height, ["NCAA DIVISION I"], ["Calibri Bold"], [15], ["Maine_MA_Blue"], alignment = ALIGN_RIGHT)
-  Evansville_page = sections_dict["Article: Feliciano & Vázquez"]
-  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 1 * (frame_header_height) + 1 * (frame_comment_height) + sep, frame_width, frame_header_height, [str(Evansville_page), "Feliciano & Vázquez"], 
+  Missouri_page = sections_dict["Article: Andrea Fuentes"]
+  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 1 * frame_header_height + 1 * (frame_comment_height) + 1 * sep, frame_width, frame_header_height, [str(Missouri_page), "Andrea Fuentes"], 
              ["RACE1 Brannt NCV Regular", "Asimov Print C"], [24, 15], 2 *["White"], alignment = ALIGN_RIGHT, line_spacing = 15)
-  text_frame(xpos_offset, ypos_offset+ 2 * frame_div_height + 2 * (frame_header_height) + 1 * (frame_comment_height) + sep, frame_width, frame_comment_height, ["In Indiana, a pair of Aces"], 
+  text_frame(xpos_offset, ypos_offset+ 2 * frame_div_height + 2 * (frame_header_height) + 1 * (frame_comment_height) + 1 * sep, frame_width, frame_comment_height, ["In Missouri, a setter orchestrates a preeminent office"], 
+             ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_RIGHT, line_spacing = 11)
+  Evansville_page = sections_dict["Article: Feliciano & Vázquez"]
+  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 2 * (frame_header_height) + 2 * (frame_comment_height) + 2 * sep, frame_width, frame_header_height, [str(Evansville_page), "Feliciano and Vázquez"], 
+             ["RACE1 Brannt NCV Regular", "Asimov Print C"], [24, 15], 2 *["White"], alignment = ALIGN_RIGHT, line_spacing = 15)
+  text_frame(xpos_offset, ypos_offset+ 2 * frame_div_height + 3 * (frame_header_height) + 2 * (frame_comment_height) + 2 * sep, frame_width, frame_comment_height, ["In Indiana, a pair of Aces"], 
              ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_RIGHT, line_spacing = 11)
   Bernier_page = sections_dict["Article: Lina Bernier"]
-  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 2 * (frame_header_height) + 2 * (frame_comment_height) + 2 * sep, frame_width, frame_header_height, [str(Bernier_page), "Lina Bernier"], 
+  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 3 * (frame_header_height) + 3 * (frame_comment_height) + 3 * sep, frame_width, frame_header_height, [str(Bernier_page), "Lina Bernier"], 
              ["RACE1 Brannt NCV Regular", "Asimov Print C"], [24, 15], 2 *["White"], alignment = ALIGN_RIGHT, line_spacing = 15)
-  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 3 * (frame_header_height) + 2 * (frame_comment_height) + 2 * sep, frame_width, frame_comment_height, ["In Miami, a most versatile performer"], 
+  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 4 * (frame_header_height) + 3 * (frame_comment_height) + 3 * sep, frame_width, frame_comment_height, ["In Miami, a most versatile performer"], 
              ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_RIGHT, line_spacing = 11)
   Trujillo_page = sections_dict["Article: Mariana Trujillo"]
-  text_frame(xpos_offset, ypos_offset+ 2 * frame_div_height + 3 * (frame_header_height) + 3 * (frame_comment_height) + 3 * sep, frame_width, frame_header_height, [str(Trujillo_page), "Mariana Trujillo"], 
+  text_frame(xpos_offset, ypos_offset+ 2 * frame_div_height + 4 * (frame_header_height) + 4 * (frame_comment_height) + 4 * sep, frame_width, frame_header_height, [str(Trujillo_page), "Mariana Trujillo"], 
              ["RACE1 Brannt NCV Regular", "Asimov Print C"], [24, 15], 2 *["White"], alignment = ALIGN_RIGHT, line_spacing = 15)
-  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 4 * (frame_header_height) + 3 * (frame_comment_height) + 3 * sep, frame_width, frame_comment_height, ["In Alabama, forever 17"], 
+  text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 5 * (frame_header_height) + 4 * (frame_comment_height) + 4 * sep, frame_width, frame_comment_height, ["In Alabama, forever 17"], 
              ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_RIGHT, line_spacing = 11)
   # Right side
   text_frame(xpos_offset_2, ypos_offset, frame_width_2, frame_div_height, ["NCAA DIVISION II"], ["Calibri Bold"], [15], ["Maine_MA_Blue"], alignment = ALIGN_LEFT)
   AIC_page = sections_dict["Article: Eckert & Serra"]
-  text_frame(xpos_offset_2, ypos_offset + 1 * frame_div_height, frame_width_2, frame_header_height, [str(AIC_page), "Eckert & Serra"], 
+  text_frame(xpos_offset_2, ypos_offset + 1 * frame_div_height, frame_width_2, frame_header_height, [str(AIC_page), "Eckert and Serra"], 
              ["RACE1 Brannt NCV Regular", "Asimov Print C"], [24, 15], 2 *["White"], alignment = ALIGN_LEFT, line_spacing = 15)
   text_frame(xpos_offset_2, ypos_offset + 1 * frame_div_height + 1 * (frame_header_height), frame_width_2, frame_comment_height, ["In Massachusetts, a playmaker and a finisher"], 
              ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_LEFT, line_spacing = 11)
   text_frame(xpos_offset_2, ypos_offset + 1 * frame_div_height + 1 * (frame_header_height) + 1 * (frame_comment_height) + sep, frame_width_2, frame_div_height, ["NCAA DIVISION III"], ["Calibri Bold"], [15], ["Maine_MA_Blue"], alignment = ALIGN_LEFT)
   Manhattanville_page = sections_dict["Article: Vital & Figueroa"]
-  text_frame(xpos_offset_2, ypos_offset + 2 * frame_div_height + 1 * (frame_header_height) + 1 * (frame_comment_height) + sep, frame_width_2, frame_header_height, [str(Manhattanville_page), "Vital & Figueroa"], 
+  text_frame(xpos_offset_2, ypos_offset + 2 * frame_div_height + 1 * (frame_header_height) + 1 * (frame_comment_height) + sep, frame_width_2, frame_header_height, [str(Manhattanville_page), "Vital and Figueroa"], 
              ["RACE1 Brannt NCV Regular", "Asimov Print C"], [24, 15], 2 *["White"], alignment = ALIGN_LEFT, line_spacing = 15)
   text_frame(xpos_offset_2, ypos_offset+ 2 * frame_div_height + 2 * (frame_header_height) + 1 * (frame_comment_height) + sep, frame_width_2, frame_comment_height, ["In New York, a pair of underclassmen rise to the occasion"], 
              ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_LEFT, line_spacing = 11)
@@ -111,4 +116,8 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
                  "All-Conference", "Academic All-Stars", "Statistical Leaders", "Clubs", "National Tournaments", "Outstanding Matches"]
   text_frame(xpos_offset_2 + 30, ypos_offset + 2 * frame_div_height + 3 * (frame_header_height) + 3 * (frame_comment_height) + 6.5 * sep, 
              frame_width_2 * 0.8, 11 * frame_div_height, departments, dpt_num_lines * ["Asimov Print C"], dpt_num_lines * [10], dpt_num_lines * ["White"], alignment = ALIGN_LEFT, line_spacing = 12)
-  
+
+  # Footnote
+  text_frame(36, 683, 100, 16, ["THE 400 CLUB"], ["Arial Black"], [12], ["White"], alignment = ALIGN_LEFT)  
+  text_frame(36, 698, 118, 45, ["University of North Florida's Solimar Cestero tallied 424 kills in 2019, one of 5 Puerto Rican players to top 400"], ["Calibri Regular"], [10], ["White"], alignment = ALIGN_LEFT, line_spacing = 11) 
+  text_frame(36, 748, 150, 25, ["Photograph by", "Brad Young | ASUN Photos"], ["Arial Black", "Calibri Regular"], [10, 10], ["White", "White"], alignment = ALIGN_LEFT, line_spacing = 12) 

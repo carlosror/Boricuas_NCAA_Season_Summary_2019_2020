@@ -105,9 +105,9 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   player_count = 0
   for page in range(num_pages):
     top_rect = createRect(0, 0, 612, 36)
-    setFillColor("NAIA Red", top_rect); setLineColor("NAIA Red", top_rect)
+    setFillColor("NJCAA Blue", top_rect); setLineColor("NJCAA Blue", top_rect)
     bottom_rect = createRect(0, 756, 612, 36)
-    setFillColor("NAIA Red", bottom_rect); setLineColor("NAIA Red", bottom_rect)
+    setFillColor("NJCAA Blue", bottom_rect); setLineColor("NJCAA Blue", bottom_rect)
     center_rect = createRect(0, 36, 612, 720)
     setFillColor("White", center_rect); setLineColor("White", center_rect)
     
