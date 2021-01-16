@@ -12,7 +12,7 @@ eckert_df <- data.frame(dates, assists)
 # Re-ordering dates:
 eckert_df$dates <- factor(eckert_df$dates, levels(eckert_df$dates)[c(4:6, 1:3)])
 
-eckert <- readPNG("C:/Users/cesargb/Documents/Boricuas_NCAA/Season_Summary_2019_2020/Women/Articles/AIC_article_2019_2020/Naomi_Eckert.png")
+eckert <- readPNG("Naomi_Eckert.png")
 aic_logo <- readPNG("./../../School_Logos/American_International_College.png")
 
 theme_plot <- function(...) {
@@ -46,7 +46,7 @@ p_assists <- ggplot(eckert_df) + geom_bar(aes(x=dates, y = assists), stat = "ide
      # geom_text(aes(label = max_kills, x=year, y = max_kills), position = position_dodge(width = 0.75), vjust = -0.6, size = 4) + 
      # scale_fill_manual(values=colorPalette) +
      theme_plot() + 
-     ggtitle(label = "New kid on the block", subtitle = "Naomi Eckert topped the single-match AIC \nfreshman record for assists at least 6 times in 2019") + 
+     ggtitle(label = "New Kid On The Block", subtitle = "Naomi Eckert topped the single-match AIC \nfreshman record for assists at least 6 times in 2019") + 
      ylab("Assists in a match") + 
      annotation_raster(eckert, xmin = 4.95, xmax = 5.45, ymin = 85, ymax = 111 ) + 
      annotation_raster(aic_logo, xmin = 5.55, xmax = 6.25, ymin = 85, ymax = 111) + 

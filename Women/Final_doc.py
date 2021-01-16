@@ -68,8 +68,9 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   for idx in range(2,12):
     linkTextFrames("Fuentes" + str(idx), "Fuentes" + str(idx + 1))
   
-  unlinkTextFrames("AIC4")
-  for idx in range(2,5):
+  for idx in range(4,8,2):
+    unlinkTextFrames("AIC" + str(idx))
+  for idx in range(2,6):
     linkTextFrames("AIC" + str(idx), "AIC" + str(idx + 1))
   
   for idx in range(4,10,2):
