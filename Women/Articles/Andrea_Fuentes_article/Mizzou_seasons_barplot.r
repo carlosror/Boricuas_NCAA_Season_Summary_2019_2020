@@ -7,6 +7,10 @@ missouri_df <- read.csv("Missouri_seasons.csv", stringsAsFactors = FALSE)
 missouri_df$Highlight <- ifelse(missouri_df$Period == "1990's", "Black", ifelse(missouri_df$Period == "2000 - 2018", "Gray", "Gold"))
 # https://stackoverflow.com/questions/45820250/highlight-a-single-bar-in-ggplot
 
+Kreklows <- readPNG("Kreklows_1_cutout.png")
+Taylors <- readPNG("Joshua_and_Molly_Taylor_2_cutout.png")
+Missouri_logo <- readPNG("./../../School_Logos/University_of_Missouri.png")
+
 theme_plot <- function(...) {
   # theme_minimal() +
   theme( 
@@ -34,7 +38,7 @@ theme_plot <- function(...) {
 # using sprintf to control significant digits in plot's labels
 # https://stackoverflow.com/questions/38369855/how-to-put-exact-number-of-decimal-places-on-label-ggplot-bar-chart
 # line_df <- data.frame(x1 = 5.6, x2 = 3.6, y1 = 0.6, y2 = 0.6)
-p_missouri <- ggplot(missouri_df) + geom_bar(aes(x = Period, y = Winning_Pctg, fill = Highlight), stat = "identity", width = 0.4) +
+p_missouri <- ggplot(missouri_df) + geom_bar(aes(x = Period, y = Winning_Pctg, fill = Highlight), stat = "identity", width = 0.3) +
          theme_plot() +
          ggtitle(label = "Three Tiger Eras", subtitle = "The nineties, the Kreklows, and the Taylors") +
          geom_text(aes(label = sprintf("%0.3f", round(Winning_Pctg, 3)), x = Period, y = Winning_Pctg), position = position_dodge(width = 0.75), vjust = -0.75, colour = "black", size = 6) + 
@@ -43,6 +47,9 @@ p_missouri <- ggplot(missouri_df) + geom_bar(aes(x = Period, y = Winning_Pctg, f
          ylab("Winning %") +
          ylim(0, 0.8) +
          scale_fill_manual( values = c( "Black" = "black", "Gray" = "gray75", "Gold" = "#F1B82D" ), guide = FALSE ) +
+         annotation_raster(Kreklows, xmin = 1.75, xmax = 1.75 + 0.5, ymin = 0.0, ymax = 0.0 + 0.5) +
+         annotation_raster(Taylors, xmin = 2.775, xmax = 2.775 + 0.45, ymin = 0.0, ymax = 0.0 + 0.5) +
+         annotation_raster(Missouri_logo, xmin = 2.8, xmax = 2.8 + 0.4, ymin = 0.9, ymax = 0.9 + 0.127) +
          # annotation_raster(FMU_champions, xmin = 0.7, xmax = 0.7 + 2.8, ymin = 0.325, ymax = 0.325 + 0.425) +
          # annotation_raster(lion_2, xmin = 4.2, xmax = 4.2 + 2, ymin = 0.715, ymax = 0.715 + 0.3) +
          # geom_segment(aes(x = x1, y = y1, xend = x2, yend = y2), colour = "Black", data = line_df, arrow = arrow(length = unit(0.02, "npc"), type = "closed")) +

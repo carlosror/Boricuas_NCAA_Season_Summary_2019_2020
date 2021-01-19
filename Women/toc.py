@@ -64,7 +64,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   Missouri_page = sections_dict["Article: Andrea Fuentes"]
   text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 1 * frame_header_height + 1 * (frame_comment_height) + 1 * sep, frame_width, frame_header_height, [str(Missouri_page), "Andrea Fuentes"], 
              ["RACE1 Brannt NCV Regular", "Asimov Print C"], [24, 15], 2 *["White"], alignment = ALIGN_RIGHT, line_spacing = 15)
-  text_frame(xpos_offset, ypos_offset+ 2 * frame_div_height + 2 * (frame_header_height) + 1 * (frame_comment_height) + 1 * sep, frame_width, frame_comment_height, ["In Missouri, a setter orchestrates a preeminent office"], 
+  text_frame(xpos_offset, ypos_offset+ 2 * frame_div_height + 2 * (frame_header_height) + 1 * (frame_comment_height) + 1 * sep, frame_width, frame_comment_height, ["In Missouri, a setter orchestrates a preeminent offense"], 
              ["Calibri Regular"], [10.8], ["White"], alignment = ALIGN_RIGHT, line_spacing = 11)
   Evansville_page = sections_dict["Article: Feliciano & Vázquez"]
   text_frame(xpos_offset, ypos_offset + 2 * frame_div_height + 2 * (frame_header_height) + 2 * (frame_comment_height) + 2 * sep, frame_width, frame_header_height, [str(Evansville_page), "Feliciano and Vázquez"], 
