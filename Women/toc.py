@@ -113,7 +113,7 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   text_frame(xpos_offset_2, ypos_offset+ 2 * frame_div_height + 3 * (frame_header_height) + 3 * (frame_comment_height) + 6.5 * sep, frame_width_2 / 8.0, 
              11 * frame_div_height, departments_pages, dpt_num_lines * ["Asimov Print C"], dpt_num_lines * [10], dpt_num_lines * ["White"], alignment = ALIGN_LEFT, line_spacing = 12)
   departments = ["NAIA", "NCAA", "NJCAA", "Beach Volleyball", "L.A.I.", "Where They Play", "Where They Are From", 
-                 "All-Conference", "Academic All-Stars", "Statistical Leaders", "Clubs", "National Tournaments", "Outstanding Matches"]
+                 "All-Conference", "Academic All-Stars", "Statistical Leaders", "Statistical Clubs", "National Tournaments", "Outstanding Matches"]
   text_frame(xpos_offset_2 + 30, ypos_offset + 2 * frame_div_height + 3 * (frame_header_height) + 3 * (frame_comment_height) + 6.5 * sep, 
              frame_width_2 * 0.8, 11 * frame_div_height, departments, dpt_num_lines * ["Asimov Print C"], dpt_num_lines * [10], dpt_num_lines * ["White"], alignment = ALIGN_LEFT, line_spacing = 12)
 

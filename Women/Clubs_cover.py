@@ -38,10 +38,10 @@ if newDocument(PAPER_LETTER, margins, PORTRAIT, 1,  UNIT_POINTS, NOFACINGPAGES, 
   defineColor("St Francis 2", 222, 152, 5, 10)
   
   insert_image(-0.5, 0, 616, 796, "Clubs_cover.jpg")
-  div_width = 65
+  div_width = 185
   div_rect = createRect(612 - div_width, 0, div_width, 30)
-  setFillColor("White", div_rect); setLineColor("None", div_rect)
-  text_frame(612 - div_width + 4, 5, div_width, 35, ["Clubs"], ["Asimov Print C"], [24], ["St Francis 2"], alignment = ALIGN_RIGHT)
+  setFillColor("St Francis 2", div_rect); setLineColor("None", div_rect)
+  text_frame(612 - div_width + 4, 5, div_width, 35, ["Statistical Clubs"], ["Asimov Print C"], [24], ["White"], alignment = ALIGN_RIGHT)
   # insert_image(30, 56, 70, 70 * (1179.0 / 1200), "./Division_logos/NCAA_DI_logo_original.png")
   text_frame(365, 620, 240, 85, ["Kizzy Rodríguez", "St. Francis College", "New York", "Photo: St Francis Brooklyn College\nAthletics "], ["Asimov Print C" for idx in range(4)], 4*[12], 
              ["White" for idx in range(4)], alignment = ALIGN_RIGHT, line_spacing = 15)
