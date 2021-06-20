@@ -3,9 +3,9 @@ This is the academic year 2019-2020 yearbook of Puerto Rico women's college voll
 
 ### Cover, table of contents, and executive summary
 
-![](./Women/Facebook/Final_doc-page001.png "Cover") ![](./Women/Facebook/Final_doc-page002.png "TOC")
+![](./Women/Facebook/Final_doc-page001.jpg "Cover") ![](./Women/Facebook/Final_doc-page002.jpg "TOC")
 <br>
-![](./Women/Facebook/Final_doc-page003.png "Summary 1") ![](./Women/Facebook/Final_doc-page004.png "Suumary 2")
+![](./Women/Facebook/Final_doc-page003.jpg "Summary 1") ![](./Women/Facebook/Final_doc-page004.jpg "Suumary 2")
 
 ### Maps
 
