@@ -1,6 +1,12 @@
 ### Summary
 This is the academic year 2019-2020 yearbook of Puerto Rico women's college volleyball players in the United States. It includes many maps and plots, all of which were created using **R**. The [document](https://github.com/carlosror/Boricuas_NCAA_Season_Summary_2019_2020/raw/master/Women/Final_doc_compressed.pdf), almost in its entirety (265 pages), was put together using the **Python** API for [**Scribus**](https://www.scribus.net/), an open-source desktop publishing program.
 
+### Cover, table of contents, and executive summary
+
+![](./Women/Facebook/Final_doc-page001.png "Cover") ![](./Women/Facebook/Final_doc-page002.png "TOC")
+<br>
+![](./Women/Facebook/Final_doc-page003.png "Summary 1") ![](./Women/Facebook/Final_doc-page004.png "Suumary 2")
+
 ### Maps
 
 All of the maps below were made using **R**.
